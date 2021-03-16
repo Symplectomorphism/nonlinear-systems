@@ -1,0 +1,82 @@
+\section{Systems with Multiple Critical Points}
+
+\begin{frame}[standout, plain, noframenumbering]
+    Systems with Multiple Critical Points
+
+    % \medskip
+
+    % \footnotesize
+    % Sam Greydanus \quad Misko Dzamba \quad Jason Yosinski
+\end{frame}
+
+\begingroup
+\small
+
+
+\begin{frame}
+    \frametitle{Morse Theorem -- (Third Version)}
+
+    \begin{theorem}[Morse Theorem]
+        If $V: \mc{M} \rightarrow \mathbb{R}$ is a Morse function such that 
+        $\mc{M}_a$ is compact for each $a \in \mathbb{R}$ then $\mc{M}$ has the 
+        homotopy type of a CW-complex with one $i$-cell for each critical point 
+        of index $i$.
+    \end{theorem}
+    
+    \begin{corollary}
+        Suppose that the dynamical system $(\mc{M}, \varphi)$ has several
+        equilibria $(x_1, \ldots, x_k)$. If there exists a Morse-Lyapunov
+        function $V: \mc{M} \rightarrow \mathbb{R}_{\geq 0}$ then $\{x_1,
+        \ldots, x_k\}$ is a retract of the domain of attraction.
+    \end{corollary}
+
+    \begin{prop}[Reeb Theorem]
+        Suppose that $\mc{M}$ is compact without boundary. If $V: \mc{M}
+        \rightarrow \mathbb{R}$ is a smooth function with only two critical
+        points, then $\mc{M}$ is homeomorphic to the $n$-sphere $\mathbb{S}^n$.
+    \end{prop}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Morse Inequalities}
+
+    \begin{theorem}[Morse Inequalities]
+        Let $m_k$ be the number of ciritcal points of a Morse function $V$ with
+        index $k$. Then, we have
+
+        \begin{align*}
+            b_k &\leq m_k, \quad \forall k, \\
+            \sum_{i=0}^j (-1)^{j-i}b_i &\leq \sum_{i=0}^j (-1)^{j-i}m_i \quad \forall j, \\
+            \chi(\mc{M}) &= \sum_k (-1)^k b_k = \sum_k (-1)^k m_k.
+        \end{align*}
+    \end{theorem}
+
+    The next corollary states a necesary condition for the existence of a
+    Morse-Lyapunov function based on the Euler characteristic, which is a
+    topological invariant.
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Existence of Morse-Lyapunov Functions}
+
+    \begin{corollary}
+        Consider the dynamical system $(\mc{M}, \varphi)$ with several
+        equilibria $(x_1, \ldots, x_k)$. If there exists a Morse-Lyapunov
+        function $V: \mc{M} \rightarrow \mathbb{R}_{\geq 0}$ then $\chi(\mc{M})
+        = k \geq b_0$.
+    \end{corollary}
+
+    \begin{proof}
+        If there exists a Morse-Lyapunov function $V$, $(x_1, \ldots, x_k)$ are
+        the only critical points with indices $0$. Then, by the Morse
+        inequalities, $\chi(\mc{M}) = m_0 = k$ and $b_0 \leq m_0 = k$.
+    \end{proof}
+
+    \begin{rem}
+        If $\chi(\mc{M}) \neq k$ then there is no Morse-Lyapunov function for
+        the dynamical system.
+    \end{rem}
+\end{frame}
+
+\endgroup

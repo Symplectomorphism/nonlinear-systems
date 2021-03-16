@@ -1,0 +1,29 @@
+\question Given $A \in \mathbb{R}^{3 \times 3}$, $b \in \mathbb{R}^3$ with the
+pair $(A,b)$ controllable and $q$ the last row of $\mc{C}^{-1} = \bmat{b & Ab &
+A^2b}^{-1}$, show that \[ T = \bmat{q \\ qA \\ qA^2} \] is nonsingular.
+
+\begin{solution}
+%
+Since the pair $(A,b)$ is controllable, the matrix $\mc{C}$ is invertible and
+hence $\det{\mc{C}} \in \mathbb{R}^\times$, where $\mathbb{R}^\times$ is the
+multiplicative group of units of $\mathbb{R}$ (i.e., all nonzero scalars).
+Premultiplying $\mc{C}^{-1}$ by $e_3^\top$, the transpose of the third standard
+basis vector of $\mathbb{R}^3$, picks out the its last row, i.e., $q = e_3^\top
+\mc{C}^{-1}$. This implies $q \mc{C} = e_3^\top$, i.e.,
+%
+\[
+    qb = qAb = 0, \quad qA^2b = 1.
+\]
+Now, consider the product $T\mc{C}$ and use the equalities above to get
+\[
+    T\mc{C} = \bmat{q \\ qA \\ qA^2}\bmat{b & Ab & A^2b} = 
+    \bmat{0 & 0 & 1 \\ 0 & 1 & \bullet \\ 1 & \bullet & \bullet} =: M,
+\]
+where each $\bullet \in \mathbb{R}$ represents some scalar. The matrix $M \in
+\mathbb{R}^{3 \times 3}$ is nonsingular as  $\det{M} = -1$. Therefore, 
+\[ \det{T} = \det{(M\mc{C}^{-1})} = -\det{\mc{C}^{-1}} = -\frac{1}{\det{\mc{C}}}
+\in \mathbb{R}^\times, \] where the second and third equalities follow because
+$\det: GL(3,\mathbb{R}) \rightarrow \mathbb{R}^\times$ is a group homomorphism.
+\hfill $\blacksquare$
+%
+\end{solution}

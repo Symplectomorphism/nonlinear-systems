@@ -1,0 +1,55 @@
+\section{Systems with Single Critical Points}
+
+\begin{frame}[standout, plain, noframenumbering]
+    Systems with Single Critical Points
+
+    % \medskip
+
+    % \footnotesize
+    % Sam Greydanus \quad Misko Dzamba \quad Jason Yosinski
+\end{frame}
+
+\begingroup
+\small
+
+\begin{frame}
+    \frametitle{Domain of Attraction -- Revisited}
+
+    \begin{theorem}[Brown-Stallings Lemma]
+        Let $\mc{M}$ be a paracompact manifold such that every compact subset is
+        contained in an open set diffeomorphic to a Euclidean space. Then
+        $\mc{M}$ itself is diffeomorphic to a Euclidean space.
+    \end{theorem}
+
+    \begin{corollary}
+        Let $\mc{M}$ be a paracompact manifold. The domain of attraction of an
+        asymptotically stable equilibrium point is diffeomorphic to a Euclidean
+        space.
+    \end{corollary}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Morse and Sontag Theorems}
+
+    \begin{theorem}[Morse Theorem]
+        Let $V: \mc{M} \rightarrow \mathbb{R}$ be a Morse function, $p$ a
+        critical point such that $\text{ind}(V, p) = i$ and $c = V(p)$. If there
+        exists $\varepsilon > 0$ such that $\mc{M}_{c-\varepsilon,
+        c+\varepsilon}$ is compact and does not contain other critical points
+        $p$, then $\mc{M}_{c-\varepsilon} \cup e_i$ is a deformation retract of
+        $\mc{M}_{c+\varepsilon}$ where $e_i$ is an $i$-cell.
+        % (in particular, $\mc{M}_{c+\varepsilon}$ has the homotopy type of
+        % $\mc{M}_{c-\varepsilon}$ with an $i$-cell attached).
+    \end{theorem}
+
+    \begin{theorem}[Sontag Theorem]
+        Let us consider the dynamical system $(\mc{M}, \varphi)$ with an
+        equilibrium point $x_e \in \mc{M}$. Suppose that $x_e$ is asymptotically
+        stable. Then the domain of attraction of $x_e$, given by 
+        \[ \mc{A} = \left\{ x \in \mc{M}: \lim_{t \rightarrow \infty} \varphi(t,
+        x) = x_e \right\}, \] is contractible.
+    \end{theorem}
+\end{frame}
+
+
+\endgroup

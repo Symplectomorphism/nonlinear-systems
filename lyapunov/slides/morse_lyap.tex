@@ -1,0 +1,75 @@
+\section{Morse-Lyapunov Functions}
+
+\begin{frame}[standout, plain, noframenumbering]
+    Morse-Lyapunov Functions
+
+    % \medskip
+
+    % \footnotesize
+    % Sam Greydanus \quad Misko Dzamba \quad Jason Yosinski
+\end{frame}
+
+\begingroup
+\small
+
+\begin{frame}
+    \frametitle{Isolated Critical Points}
+
+    \begin{lemma}
+        Suppose that $x_e$ is an equilibrium points of the dynamical system $(M,
+        \varphi)$. If $V: \mc{M} \rightarrow \mathbb{R}$ is a differentiable
+        Lyapunov function then $x_e$ is the only critical point of $V$.
+    \end{lemma}
+
+    \begin{proof}
+        Suppose $V$ has another critical point, $x_c$, in the domain of
+        attraction. By the definition of a Lyapunov function, we must have
+        $\mc{L}_fV(x_c) = 0$. This contradicts the fact that if $x \neq x_e$,
+        $\mc{L}_fV(x) < 0$.
+    \end{proof}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Morse Lemma}
+
+    \begin{theorem}[Morse Lemma]
+        Let $p \in \mc{M}$ be a nondegenerate critical point of a smooth
+        function $V: \mc{M} \rightarrow \mathbb{R}$. There exists a local
+        coordinate system $\{x_i\}_1^n$ in a nbhd. $\mc{N} \subseteq \mc{M}$ of
+        $p$ with $x_i(p) = 0$ for all $1 \leq i \leq n$ such that for $x \in
+        \mc{N}$, \[ V(x) = V(p) - x_1^2 - \ldots - x_i^2 + x_{i+1}^2 + \ldots +
+        x_n^2 \] where $i = \text{ind}(V,p)$.
+    \end{theorem}
+
+    \begin{corollary}
+        Let $p \in \mc{M}$ be an equilibrium point of $(\mc{M}, \varphi)$ and
+        $V: \mc{M} \rightarrow \mathbb{R}_{\geq 0}$ a Morse-Lyapunov function. 
+        There exists a local coordinate system $\{x_i\}_1^n$ around $p$ such that 
+        $V$ is locally the canonical quadratic Lyapunov function 
+        \[ V(x) = \sum_{i=1}^n x_i^2 \] with $\text{ind}(V, p) = 0$.
+    \end{corollary}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Level Sets of a Lyapunov Function}
+
+    \begin{theorem}[Deformation Lemma]
+        Let $V: \mc{M} \rightarrow \mathbb{R}$ be a smooth function and $a, b
+        \in V(\mc{M})$ such that $a < b$. If $\mc{M}_{a,b}$ is compact and does
+        not contain critical points of $V$ then $\mc{M}_a$ is diffeomorphic to
+        $\mc{M}_b$. MOreover, $\mc{M}_a$ is a deformation retract of $\mc{M}_b$.
+    \end{theorem}
+
+    \begin{corollary}
+        Let $\mc{M}$ be a smooth Riemannian manifold. If $\mc{M}$ contains a
+        closed invariant asymptotically stable set, then for all $a, b \in
+        V(\mc{M})$, $\mc{M}_a$ is diffeomorphic to $\mc{M}_b$ and $\mc{M}_a$ is
+        a deformation retract of $\mc{M}_b$ where $V$ is a smooth Lyapunov
+        function.
+    \end{corollary}
+\end{frame}
+
+
+\endgroup

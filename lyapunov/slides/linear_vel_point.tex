@@ -1,0 +1,50 @@
+\section{Linear Velocity of a Point Attached to a Moving Frame}
+
+\begin{frame}[standout, plain, noframenumbering]
+    Linear Velocity of a Point Attached to a Moving Frame
+
+    % \medskip
+
+    % \footnotesize
+    % Sam Greydanus \quad Misko Dzamba \quad Jason Yosinski
+\end{frame}
+
+\begingroup
+\small
+
+\begin{frame}
+    \frametitle{Linear Velocity of a Point Attached to a Moving Frame}
+
+    \begin{itemize}
+        \item Suppose the point $p$ is rigidly attached to $\Sigma_1$ and that 
+        $\Sigma_1$ is rotating relative to the frame $\Sigma_0$.
+        \[ p^0 = R_1^0(t)p^1. \]
+        \item Differentiating this equation, we get 
+        \[ \dot{p}^0 = \dot{R}_1^0 p^1 + \cancelto{0}{R_1^0 \dot{p}^1} =
+        S\left( \omega^0 \right) R_1^0p^1 = S\left( \omega^0 \right) p^0 =
+        \omega^0 \times p. \]
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Linear Velocity of a Point Attached to a Moving Frame}
+
+    \begin{itemize}
+        \item Now suppose that the motion of $\Sigma_1$ w.r.t. $\Sigma_0$ is
+        more general and is given by \[ H_1^0(t) = \bmat{
+            R(t) & o(t) \\ 0 & 1
+        }. \]
+        \item Hence we have $\qquad p^0 = Rp^1 + o$.
+        \item Differentiating, we obtain,
+        \[ \dot{p}^0 = \dot{R}p^1 + \dot{o} = S(\omega)Rp^1 + \dot{o} = \omega
+        \times r + v, \] where $r = Rp^1$ is the vector from $o_1$ to $p$,
+        expressed in $\Sigma_0$, and $v$ is the rate at which the origin $o_1$ 
+        is moving.
+        \item If the point $p$ is moving relative to $\Sigma_1$, then we must
+        add to the term $v$ the term $R(t)\dot{p}^1$, which is the rate of
+        change of the coordinates $p^1$, expressed in $\Sigma_0$.
+    \end{itemize}
+\end{frame}
+
+\endgroup

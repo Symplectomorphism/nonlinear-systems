@@ -1,0 +1,66 @@
+\section{Inverse Velocity and Acceleration}
+
+\begin{frame}[standout, plain, noframenumbering]
+    Inverse Velocity and Acceleration
+
+    % \medskip
+
+    % \footnotesize
+    % Sam Greydanus \quad Misko Dzamba \quad Jason Yosinski
+\end{frame}
+
+\begingroup
+\small
+
+
+\begin{frame}
+    \frametitle{Inverse Velocity and Acceleration}
+
+    \begin{itemize}
+        \item The inverse velocity problem is the problem of finding the joint
+        velocities $\dot{q}$ that produce the desired end effector velocity by
+        solving the equation
+        \begin{equation}
+            \xi = J\dot{q}
+            \label{eq:vel}
+        \end{equation}
+        \item When the Jacobian is square and nonsingular, this problem can be 
+        solved by simply inverting the Jacobian matrix, to give \[\dot{q} = J^{-1}\xi. \]
+        \item For manipulators that do not have exactly six joints, the Jacobian
+        cannot be inverted. In this case, there will be a solution to
+        equation~\eqref{eq:vel} if and only if $\xi$ lies in the range space of
+        the Jacobian. This is the case if and only if \[ \rank{J(q)} = \rank
+        \hspace{-6mm} \underbrace{\bmat{J(q) | \xi}}_{\textrm{augmented matrix}}
+        \hspace{-6mm}. \]
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Inverse Velocity and Acceleration}
+
+    \begin{itemize}
+        \item If $n > 6$, we can solve for $\dot{q}$ using the right
+        pseudoinverse of $J$. Problem 4-20 shows that a solution to
+        equation~\eqref{eq:vel} is given by 
+        \[ \dot{q} = J^\dagger \xi + (I - J^\dagger J)b, \] in which $b \in
+        \mathbb{R}^n$ is an arbitrary vector.
+        \item For $m < n$, $(I - J^\dagger J) \neq 0$, and all vectors of the
+        form $(I - J^\dagger J)b$ lie in the nullspace of $J$.
+        \begin{itemize}
+            \footnotesize{
+            \item If $\dot{q}^' = (I - J^\dagger J)b$, then when the joints move 
+            with velocity $\dot{q}^'$, the end effector will remain fixed since 
+            $J\dot{q}^' = 0$.
+            \item Thus, if $\dot{q}$ solves eqn.~\eqref{eq:vel}, then so does 
+            $\dot{q} + \dot{q}^'$ with $\dot{q}^' = (I - J^\dagger J)b$, for any 
+            vector $b \in \mathbb{R}^3$.
+            \item If the goal is to minimize the resulting joint velocities, we 
+            choose $b = 0$ (Problem 4-20).
+            }
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+\endgroup

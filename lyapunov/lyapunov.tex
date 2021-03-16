@@ -1,0 +1,87 @@
+%------------------------------------------------
+%	PACKAGES AND THEMES
+%------------------------------------------------
+\documentclass{beamer}
+\mode<presentation> {
+    \usetheme[block=fill, sectionpage=none]{metropolis}
+    % \usecolortheme{metropolis-highcontrast}
+    % \usefonttheme[onlymath]{serif}
+    \setbeamercolor{normal text}{bg=white}
+}
+% \setbeameroption{show notes on second screen=right}
+% \setbeamertemplate{note page}{\pagecolor{yellow!5}\insertnote}
+% \setsansfont{Ubuntu}
+% \setmonofont{Ubuntu Mono}
+% \setsansfont[BoldFont={Fira Sans SemiBold}]{Fira Sans Book}
+
+\input{preamble.tex}
+
+%------------------------------------------------
+%   TITLE PAGE
+%------------------------------------------------
+\title[] {
+    Nonlinear Systems
+}
+\subtitle[]{
+    Morse Theory and Lyapunov Stability on Manifolds
+}
+\author[Aykut C. Satici]{
+    Aykut C. Satici \\
+    $\,$ \\
+}
+\institute[BSU] {
+    Boise State University \\
+    % \medskip
+    Mechanical and Biomedical Engineering \\%
+    Electrical and Computer Engineering \\%
+    % \medskip
+    % Doctoral Comprehensive Examination
+}
+\date{March 12, 2021}
+
+\begin{document}
+
+\begin{frame}[plain, noframenumbering]
+\titlepage
+\end{frame}
+
+%------------------------------------------------
+%	PRESENTATION SLIDES
+%------------------------------------------------
+\begin{frame}[plain, noframenumbering]
+    \frametitle{Outline}
+    \tableofcontents
+    % \tableofcontents[hideallsubsections]
+\end{frame}
+
+\input{slides/introduction.tex}
+\input{slides/definitions.tex}
+\input{slides/morse_lyap.tex}
+\input{slides/single_critical_point.tex}
+\input{slides/multi_critical_points.tex}
+% \input{slides/linear_vel_point.tex}
+% \input{slides/jacobian.tex}
+% \input{slides/tool_velocity.tex}
+% \input{slides/analytical_jacobian.tex}
+% \input{slides/singularities.tex}
+% \input{slides/static_force_torque.tex}
+% \input{slides/inverse_vel_acc.tex}
+% \input{slides/manipulability.tex}
+
+
+%------------------------------------------------
+%   The Bibliography
+%------------------------------------------------
+% \begin{frame}
+%     \frametitle{References}
+%     \bibliographystyle{abbrvnat}
+%     \bibliography{wankun_thesis}
+% \end{frame}
+
+%------------------------------------------------
+%   The End
+%------------------------------------------------
+\begin{frame}[plain, standout, noframenumbering]\end{frame}
+% \input{slides/appendix.tex}
+
+\end{document}

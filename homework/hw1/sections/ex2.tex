@@ -1,0 +1,28 @@
+\question Show, by direct computation, that
+\[
+\frac{\dd z}{\dd t} = TAT^{-1} z + Tbu = \underbrace{\bmat{
+    0 & 1 & 0 \\ 0 & 0 & 1 \\ -a_0 & -a_1 & -a_2
+}}_{A_c}z + \underbrace{\bmat{0 \\ 0 \\ 1}}_{b_c}u.
+\]
+
+\begin{solution}
+%
+First, notice that the eigenvalues of similar matrices are the same. Indeed, if 
+$A_c v = \lambda v$ for some $\lambda \in \mathbb{C}$, then 
+\[A_c v = TAT^{-1}v \; \Longrightarrow \; AT^{-1}v = \lambda T^{-1}v \] so that if $v$ is
+an eigenvector of $A_c$ with eigenvalue $\lambda$, then $T^{-1}v$ is an
+eigenvector of $A$ with the same eigenvalue. 
+
+This implies that the characteristic polynomials of $A$ and $A_c$ are the same
+because the coefficients of this polynomial are given by the elementary
+symmetric polynomials in the eigenvalues of either $A$ or $A_c$, which are the
+same as proved above.
+
+Now, we invoke Cayley-Hamilton theorem to deduce that 
+\[ A^3 = -a_0 I - a_1A -a_2A^2, \] which implies 
+\[ TA = \bmat{qA \\ qA^2 \\ qA^3} = \bmat{qA \\ qA^2 \\ q\left( -a_0I -a_1A
+-a_2A^2 \right)} = \bmat{0 & 1 & 0 \\ 0 & 0 & 1 \\ -a_0 & -a_1 & -a_2}\bmat{q \\
+qA \\ qA^2} = A_cT. \] Further, we showed in Exercise 1 that $Tb = \left(q
+\mc{C}\right)^\top = e_3 = b_c$, yielding the result. \hfill $\blacksquare$
+%
+\end{solution}
