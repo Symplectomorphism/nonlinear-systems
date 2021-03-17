@@ -498,6 +498,9 @@ INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/varwidth/varwidth.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/varwidth/varwidth.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/varwidth/varwidth.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/varwidth/varwidth.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/accents/accents.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/accents/accents.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/accents/accents.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/appendixnumberbeamer/appendixnumberbeamer.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/appendixnumberbeamer/appendixnumberbeamer.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/appendixnumberbeamer/appendixnumberbeamer.sty
@@ -809,6 +812,8 @@ INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/ueuf.fd
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm
+INPUT /home/aykutsatici/repos/courses/nonlinear_systems/lyapunov/slides/analysis.tex
+INPUT /home/aykutsatici/repos/courses/nonlinear_systems/lyapunov/slides/analysis.tex
 INPUT /home/aykutsatici/repos/courses/nonlinear_systems/lyapunov/slides/morse_lyap.tex
 INPUT /home/aykutsatici/repos/courses/nonlinear_systems/lyapunov/slides/morse_lyap.tex
 INPUT /home/aykutsatici/repos/courses/nonlinear_systems/lyapunov/slides/single_critical_point.tex
@@ -826,6 +831,7 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pf
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb

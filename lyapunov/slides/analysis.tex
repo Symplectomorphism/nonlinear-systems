@@ -1,0 +1,153 @@
+\section{Lyapunov Stability Analysis on Euclidean Spaces}
+
+\begin{frame}[standout, plain, noframenumbering]
+    Lyapunov Stability Analysis on Euclidean Spaces
+
+    % \medskip
+
+    % \footnotesize
+    % Sam Greydanus \quad Misko Dzamba \quad Jason Yosinski
+\end{frame}
+
+\begingroup
+\small
+
+\begin{frame}
+    \frametitle{Autonomous Systems}
+
+    Consider the autonomous system 
+    \begin{equation}
+        \dot{x} = f(x)
+        \label{eq:autonomous}
+    \end{equation}
+    where $f: D \subseteq \mathbb{R}^n \rightarrow \mathbb{R}^n$ is a locally
+    Lipschitz map, with an equilibrium point at $x = 0$.
+
+    \begin{definition}
+        The equilibrium point $x=0$ of the system~\eqref{eq:autonomous} is
+        \begin{itemize}
+            \item \textit{stable} if, $\forall \varepsilon > 0$, $\exists \delta
+            = \delta(\varepsilon) > 0$ such that 
+            \[
+                \norm{x(0)}{} < \delta \; \Rightarrow \; \norm{x(t)}{} < 
+                \epsilon, \; \; \forall t \geq 0.
+            \]
+            \item \textit{unstable} if it is not stable.
+            \item \textit{asymptotically stable} if it is stable and $\delta$
+            can be chosen s.t.
+            \[ \norm{x(0)}{} < \delta \; \Rightarrow \; \lim_{t \to \infty} x(t)
+            = 0. \]
+        \end{itemize}
+    \end{definition}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Example -- Pendulum}
+
+    The pendulum equation
+    \begin{align*}
+        \dot{x}_1 &= x_2 \\
+        \dot{x}_2 &= -a \sin{x_1} - b x_2
+    \end{align*}
+    has two equilibrium points at ($x_1 = 0$, $x_2 = 0$) and ($x_1 = \pi$, $x_2
+    = 0$).
+    %
+    \begin{itemize}
+        \item If $b=0$, trajectories in the nbhd. of the first equilibrium are 
+        closed orbits.
+        \item By starting sufficiently close to the eq. point, trajectories are 
+        guaranteed to stay within any specified ball.
+        \item The point is not asymptotically stable since trajectories don't
+        tend to the eq. point.
+        \item If $b > 0$, the origin becomes asymptotically stable.
+        \item The second eq. point is a saddle point: the $\varepsilon-\delta$
+        requirement cannot be satisfied (for every $\varepsilon > 0$ there
+        exists a trajectory that will leave the ball $B_\varepsilon$ even if
+        $x(0)$ is arbitrarily close to $(\pi, 0)$).
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Lyapunov Stability Theorem}
+
+    \begin{theorem}
+        Let $x=0 \in D$ be an equilibrium point for~\eqref{eq:autonomous}. Let
+        $V: D \rightarrow \mathbb{R}$ be a continuously differentiable function
+        such that
+        \begin{align*}
+            V(0) = 0 \; &\text{ and } \; V(x) > 0 \text{ in } D - \{0\}, \\
+            &\dot{V}(x) \leq 0 \text{ in } D.
+        \end{align*}
+        Then, $x=0$ is stable. Moreover, if
+        \[ \dot{V}(x) < 0 \text{ in } D - \{0\} \] then $x=0$ is asymptotically
+        stable.
+    \end{theorem}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Lyapunov Stability Theorem}
+
+    \begin{proof}[Proof of stability]
+        Given $\varepsilon > 0$, choose $0 < r \leq \varepsilon$ such that $B_r
+        \subseteq D$. Let $\alpha = \min_{\norm{x}{}=r} V(x)$. Then, $\alpha >
+        0$. Take $0 < \beta < \alpha$ and consider $\mc{M}_\beta = V^{-1}((0,
+        \beta])$.
+
+        \underline{Claim}: $\mc{M}_\beta \subseteq \accentset{\circ}{B}_r$.
+        Argue ad absurdum. Suppose $\mc{M}_\beta \cap \accentset{\circ}{B}_r
+        \neq \mc{M}_\beta$. Then $\exists p \in \mc{M}_\beta \cap \partial B_r$.
+        Note, $V(p) \geq \alpha > \beta$, but $V(\mc{M}_\beta) \subseteq
+        [0,\beta]$.
+
+        The set $\mc{M}_\beta$ is invariant since \[ \dot{V}(x(t)) \leq 0 \;
+        \Rightarrow \; V(x(t)) \leq V(x(0)) \leq \beta, \; \forall t \geq 0. \]
+
+        Because $\mc{M}_\beta$ is compact (closed and bounded), we conclude that
+        the ODE~\eqref{eq:autonomous} has a unique solution $\forall t \geq 0$
+        whenever $x(0) \in \mc{M}_\beta$. Since $V$ is continuous and $V(0) =
+        0$, $\exists \delta > 0$ such that \[ \norm{x}{} \leq \delta \;
+        \Rightarrow \; V(x) < \beta. \]
+    \end{proof}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Lyapunov Stability Theorem}
+
+    \begin{proof}[Proof of stability (cont'd)]
+        Then, \[ B_\delta \subseteq \mc{M}_\beta \subseteq B_r \] and 
+        \[ x(0) \in B_\delta \; \Rightarrow \; x(0) \in \mc{M}_\beta \;
+        \Rightarrow \; x(t) \in \mc{M}_\beta \; \Rightarrow \; x(t) \in B_r, \]
+        proving stability.
+    \end{proof}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Lyapunov Stability Theorem}
+
+    \begin{proof}[Proof of asymptotic stability]
+        Now assume $\dot{V}(x) < 0$ in $D - \{0\}$. We want to show that $x(t)
+        \xrightarrow{t \to \infty} 0$; i.e., $\forall a > 0$, $\exists T > 0$, 
+        s.t. $\norm{x(t)}{} < a, \forall t > T$.
+
+        We know that $\forall a > 0$, we can choose $b > 0$ s.t. $\mc{M}_b
+        \subseteq B_a$. Therefore, it is sufficient to show that $V(x(t))
+        \xrightarrow{t \to \infty} 0$. Since $V$ is monotonically decreasing and
+        bounded from below by zero, \[ V(x(t)) \xrightarrow{t \to \infty} c \geq
+        0. \]
+
+        \underline{Claim}: $c = 0$. Argue ad absurdum. Suppose $c > 0$. By
+        continuity of $V$, $\exists d > 0$ s.t. $B_d \subseteq \mc{M}_c$. The
+        limit $V(x(t)) \rightarrow c > 0$ implies that $x(t) \notin B_d, \forall
+        t \geq 0$. Define $\max_{d \leq \norm{x}{} \leq r} \dot{V}(x) =: -\gamma
+        < 0$. It follows that 
+        \[
+        V(x(t)) = V(x(0)) + \int_0^t \dot{V}(x(\tau)) \dd \tau \leq V(x(0)) - \gamma t.
+        \]
+        The RHS will eventually become negative: contradiction ($c > 0$).
+    \end{proof}
+\end{frame}
+
+\endgroup

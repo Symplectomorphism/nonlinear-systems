@@ -1,5 +1,16 @@
+\section{Introduction}
+
+\begin{frame}[standout, plain, noframenumbering]
+    Introduction
+
+    % \medskip
+
+    % \footnotesize
+    % Sam Greydanus \quad Misko Dzamba \quad Jason Yosinski
+\end{frame}
+
 \begin{frame}
-    \frametitle{Lyapunov stability theory}
+    \frametitle{Lyapunov Stability -- Introduction}
 
     
 
@@ -11,4 +22,29 @@
         ordinary differential equations.
     \end{itemize}
 
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Lyapunov Stability -- Introduction}
+
+    \begin{itemize}
+        \item Different notions of stability: input-output stability, periodic
+        orbit stability, etc. 
+        \item Stability of equilibrium points usually characterized in the sense 
+        of Lyapunov.
+        \begin{itemize}
+            \item An equilibrium point is \textsc{stable} if all solutions
+            starting at nearby points stay nearby.
+            \item It is \textsc{asymptotically stable} if all solutions starting
+            at nearby points not only stay nearby, but also tend to the
+            equilibrium point as time approaches infinity.
+        \end{itemize}
+        \item For a linear system $\dot{x} = Ax$, the stability of $x=0$ can be
+        completely characterized by the eigenvalues of $A$.
+        \item Stability of a nonlinear system sometimes can be characterized by
+        the same method (through linearization).
+        \item Lyapunov stability theorems give sufficient conditions for
+        stability.
+    \end{itemize}
 \end{frame}

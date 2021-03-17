@@ -1,4 +1,6 @@
-\beamer@sectionintoc {1}{Notations and Definitions}{4}{0}{1}
-\beamer@sectionintoc {2}{Morse-Lyapunov Functions}{12}{0}{2}
-\beamer@sectionintoc {3}{Systems with Single Critical Points}{16}{0}{3}
-\beamer@sectionintoc {4}{Systems with Multiple Critical Points}{19}{0}{4}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Notations and Definitions}{6}{0}{2}
+\beamer@sectionintoc {3}{Lyapunov Stability Analysis on Euclidean Spaces}{14}{0}{3}
+\beamer@sectionintoc {4}{Morse-Lyapunov Functions}{21}{0}{4}
+\beamer@sectionintoc {5}{Systems with Single Critical Points}{25}{0}{5}
+\beamer@sectionintoc {6}{Systems with Multiple Critical Points}{28}{0}{6}
