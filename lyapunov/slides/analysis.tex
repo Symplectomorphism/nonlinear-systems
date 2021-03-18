@@ -210,11 +210,108 @@
 
 \begin{frame}
     \frametitle{Example: Damped pendulum}
+
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                \dot{x}_1 &= x_2, \\
+                \dot{x}_2 &= -a \sin{x_1} - bx_2.
+            \end{align*}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{center}
+                \underline{Lyapunov function candidate}
+            \end{center}
+            \vspace{-5mm}
+            \begin{align*}
+                V(x) &= a(1 - \cos{x_1}) + \frac{1}{2}x^\top P x, \\
+                P &= P^\top > 0.
+            \end{align*}
+        \end{column}
+    \end{columns}
+    The Lie derivative $\dot{V}(x)$ is given by 
+    \begin{equation*}
+        \dot{V}(x) = a(1-p_{22})x_2 \sin{x_1} - ap_{12}x_1 \sin{x_1} + (p_{11} - p_{12}b)x_1x_2 + (p_{12}-p_{22}b)x_2^2.
+    \end{equation*}
+
+    \begin{itemize}
+        \item Take $p_{22} = 1$ and $p_{11} = bp_{12}$.
+        \item We must choose $0 < p_{12} < b$ for $V$ to be positive definite. 
+        \item Choose $p_{12} = \frac{b}{2}$.
+    \end{itemize}
+
+     \begin{equation*}
+        \dot{V}(x) = -\frac{1}{2}a b x_1 \sin{x_1} - \frac{1}{2}bx_2^2.
+     \end{equation*}
+
+     This is negative definite for any $0 < \abs{x_1} < \pi$.
 \end{frame}
 
 
 \begin{frame}
     \frametitle{Region of Attraction}
+
+    \begin{definition}[Region of Attraction]
+        The \textsc{region of attraction} is defined as the set of all points
+        $x$ such that $\phi(t; x)$ is defined for all $t \geq 0$ and $\lim_{t
+        \to \infty} \phi(t; x) = 0$.
+    \end{definition}
+    \begin{itemize}
+        \item Finding the exact RoA is usually difficult.
+        \item Lyapunov fcns. can be used to estimate (inner approx.) the RoA.
+        \item From the proof of the Lyapunov stability theorem, if there is a
+        Lyapunov fcn. that satisfies asymptotic stability and if $\mc{M}_c$ is
+        bounded and contained in $D$, then $\mc{M}_c$ is (positively) invariant.
+        \item The estimate $\mc{M}_c$ of the RoA may be conservative (inner
+        approximation).
+        \item \textsc{Question}: Under what conditions is the RoA the whole space?
+        \begin{itemize}
+            \item If so, the origin is said to be \textit{globally asymptotically stable}.
+            \item The conditions of the Lyapunov theorem must clearly hold for
+            $D = \mathbb{R}^n$. But is this sufficient?
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Region of Attraction}
+    \only<1>{
+    \begin{figure}[bth]
+        \centering
+        \includegraphics[width=0.35\textwidth]{figures/lyap_surfaces.png} 
+        % \caption{\footnotesize Geometric representation of Lyapunov stability.}
+    \end{figure}
+    }
+    For $\mc{M}_c$ to be bounded ($\mc{M}_c \subseteq \accentset{\circ}{B}_r$,
+    for some $r \geq 0$), $c < \inf_{\norm{x}{} \geq r}V(x)$. If \[ l = \lim_{r
+    \to \infty} \inf_{\norm{x}{} \geq r} V(x) < \infty \] then $\mc{M}_c$ will be bounded only if $c < l$.
+    Consider (see figure) \[ V(x) =
+    \frac{x_1^2}{1 + x_1^2} + x_2^2. \] In this example, 
+    \[ l = \lim_{r \to \infty} \min_{\norm{x}{}=r} V(x) = 1. \] 
+
+    \onslide<2->{
+    An extra
+    condition that ensures that $\mc{M}_c$ is bounded for all $c > 0$ is \[ V(x)
+    \to \infty \; \text{ as } \; \norm{x}{} \to \infty. \]
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{Region of Attraction}
+
+    \begin{theorem}[Global Asymptotic Stability]
+        Let $V: \mathbb{R}^n \rightarrow \mathbb{R}$ be a continuously
+        differentiable function and the conditions of the Lyapunov stability
+        theorem hold (\textit{asymptotic}). If, in addition, \[ \norm{x}{} \to
+        \infty \; \Rightarrow \; V(x) \to \infty \] then $x=0$ is
+        \textit{globally asymptotically stable}.
+    \end{theorem}
+    
+    \begin{rem}
+        For $x=0$ to be GAS, it must be the unique equilibrium point of the
+        system (why?).
+    \end{rem}
 \end{frame}
 
 
