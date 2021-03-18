@@ -122,6 +122,12 @@
         \Rightarrow \; x(t) \in \mc{M}_\beta \; \Rightarrow \; x(t) \in B_r, \]
         proving stability.
     \end{proof}
+
+    \begin{figure}[bth]
+        \centering
+        \includegraphics[width=0.35\textwidth]{figures/lyap_geometry.png} 
+        \caption{\footnotesize Geometric representation of Lyapunov stability.}
+    \end{figure}
 \end{frame}
 
 \begin{frame}
@@ -147,6 +153,92 @@
         V(x(t)) = V(x(0)) + \int_0^t \dot{V}(x(\tau)) \dd \tau \leq V(x(0)) - \gamma t.
         \]
         The RHS will eventually become negative: contradiction ($c > 0$).
+    \end{proof}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Lyapunov Stability: Intuition}
+    \begin{figure}[bth]
+        \centering
+        \includegraphics[width=0.35\textwidth]{figures/lyap_level_sets.png} 
+        % \caption{\footnotesize Geometric representation of Lyapunov stability.}
+    \end{figure}
+
+    \begin{itemize}
+        \item A continuously differentiable function $V$, satisfying the
+        theorem's conditions is called a \textsc{Lyapunov function}.
+        \item When $\dot{V} < 0$, the trajectory moves from level set
+        $\mc{M}_{c_3} = V^{-1}(c_3)$ to an inner level set $\mc_{M}_{c_2} =
+        V^{-1}(c_2)$ with a smaller $c$.
+        \item $V^{-1}(c) \xrightarrow{c \downarrow 0} 0$. Hence the trajectory
+        approaches the origin.
+        \item If we only knew that $\dot{V} \leq 0$, we cannot be sure that the
+        trajectory $x(t) \xrightarrow{t \to \infty} 0$,\footnotemark but we can
+        conclude that the origin is stable.
+    \end{itemize}
+
+    \footnotetext{See, however, Krasovskii-LaSalle's theorem.}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Example: Undamped pendulum}
+
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                \dot{x}_1 &= x_2, \\
+                \dot{x}_2 &= -a \sin{x_1}.
+            \end{align*}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \underline{Lyapunov function candidate}\\[0.75ex]
+            $ V(x) = a(1 - \cos{x_1}) + \frac{1}{2}x_2^2. $
+        \end{column}
+    \end{columns}
+    \begin{block}{Analysis}
+        Clearly, $V(0) = 0$ and $V(x) > 0$ if $x \neq (2 k \pi, 0)$. Compute the 
+        Lie derivative of $V$ along $f$:
+        \[ \dot{V}(x) = \mc{L}_fV(x) = a x_2 \sin{x_1} - a x_2 \sin{x_1} = 0. \]
+        Thus, the origin is stable. Since $\dot{V}(x) \equiv 0$, we conclude
+        that the origin is not asymptotically stable as solutions starting on
+        the level set $\mc{M}_c$ remain in that set.
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Example: Damped pendulum}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Region of Attraction}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Chetaev's Instability Theorem}
+
+    \begin{theorem}
+        Let $V: D \rightarrow \mathbb{R}$ be a continuously differentiable
+        function such that $V(0) = 0$ and $V(x_0) > 0$ for some $x_0$ with
+        arbitrarily small $\norm{x_0}{}$. Let\\[0.5ex] \hspace{35mm} $U := \{ x
+        \in B_r: V(x) > 0\}$\\[0.5ex] and suppose that $\dot{V}(U) > 0$. Then,
+        $x=0$ is unstable.
+    \end{theorem}
+
+    \begin{proof}
+        $x_0 \in \accentset{\circ}{U}$ and $V(x_0) = a > 0$. The trajectory
+        $x(t)$ starting at $x(0) = x_0$ must leave $U$. Indeed, as long as $x(t)
+        \in U$, $V(x(t)) \geq a$, since $\dot{V}(U) > 0$. Let $\min 
+        \{\dot{V}(x): x \in U \text{ and } V(x) \geq a \} := \gamma > 0$.  Then, 
+        \[ V(x(t)) = V(x_0) + \int_0^t \dot{V}(x(s)) \dd s \geq a + \int_0^t
+        \gamma \dd s = a + \gamma t. \] Hence, $x(t)$ will leave $U$ because
+        $V(x)$ is bounded on $U$. Now, $x(t)$ cannot leave $U$ through $V(x) =
+        0$ since $V(x(t)) \geq a$. Hence it must leave $U$ through the sphere
+        $\mathbb{S}_r$. Note: $\norm{x_0}{}$ was arbitrarily small.
     \end{proof}
 \end{frame}
 
