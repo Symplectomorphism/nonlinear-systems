@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.11.4)  18 MAR 2021 12:59
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.11.4)  18 MAR 2021 16:42
  restricted system commands enabled.
  file:line:error style messages enabled.
 **/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/lyapunov.tex
@@ -1684,16 +1684,16 @@ Overfull \vbox (21.99998pt too high) detected at line 274
 <figures/lyap_surfaces.png, id=270, 1910.13625pt x 1402.23875pt>
 File: figures/lyap_surfaces.png Graphic file (type png)
 <use figures/lyap_surfaces.png>
-Package luatex.def Info: figures/lyap_surfaces.png  used on input line 304.
+Package luatex.def Info: figures/lyap_surfaces.png  used on input line 305.
 (luatex.def)             Requested size: 107.55333pt x 78.95276pt.
 
-Overfull \vbox (118.44284pt too high) detected at line 304
+Overfull \vbox (135.79308pt too high) detected at line 305
  []
 
 [25
 
 </home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/figures/lyap_surfaces.png>]
-Overfull \vbox (25.01509pt too high) detected at line 304
+Overfull \vbox (25.01509pt too high) detected at line 305
  []
 
 [26
@@ -1701,14 +1701,18 @@ Overfull \vbox (25.01509pt too high) detected at line 304
 ] [27
 
 ]
-Overfull \vbox (26.49596pt too high) detected at line 346
+Overfull \vbox (26.49596pt too high) detected at line 347
  []
 
 [28
 
 ]) (/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/slides/invariance.tex [29
 
-] [30
+]
+Overfull \vbox (6.91449pt too high) detected at line 45
+ []
+
+[30
 
 ]) (/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/slides/morse_lyap.tex [31
 
@@ -1762,17 +1766,17 @@ Package rerunfilecheck Info: File `lyapunov.out' has not changed.
 Here is how much of LuaTeX's memory you used:
  47163 strings out of 479005
  125031,1648299 words of node,token memory allocated
- 1751 words of node memory still in use:
-   28 hlist, 6 vlist, 12 rule, 13 glue, 4 kern, 9 penalty, 1 glyph, 111 attribute, 107 glue_spec, 111 attribute_list, 5 write, 16 pdf_literal, 21 pdf_colorstack nodes
-   avail lists: 1:4,2:743,3:220,4:277,5:559,6:34,7:3166,8:60,9:740,10:18,11:234
+ 1763 words of node memory still in use:
+   28 hlist, 6 vlist, 12 rule, 13 glue, 4 kern, 9 penalty, 1 glyph, 114 attribute, 107 glue_spec, 114 attribute_list, 5 write, 16 pdf_literal, 21 pdf_colorstack nodes
+   avail lists: 1:4,2:737,3:238,4:277,5:560,6:37,7:3166,8:60,9:740,10:18,11:234
  64334 multiletter control sequences out of 65536+600000
  133 fonts using 24839531 bytes
- 125i,14n,128p,1889b,817s stack positions out of 5000i,500n,10000p,200000b,200000s
-</usr/local/texlive/2020/texmf-dist/fonts/opentype/public/fira/FiraSans-LightItalic.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/fira/FiraSans-Light.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/fira/FiraSans-Regular.otf></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on lyapunov.pdf (42 pages, 515296 bytes).
+ 125i,14n,128p,1889b,822s stack positions out of 5000i,500n,10000p,200000b,200000s
+</usr/local/texlive/2020/texmf-dist/fonts/opentype/public/fira/FiraSans-LightItalic.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/fira/FiraSans-Light.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/fira/FiraSans-Regular.otf></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on lyapunov.pdf (42 pages, 525036 bytes).
 
-PDF statistics: 458 PDF objects out of 1000 (max. 8388607)
- 362 compressed objects within 4 object streams
+PDF statistics: 462 PDF objects out of 1000 (max. 8388607)
+ 365 compressed objects within 4 object streams
  93 named destinations out of 1000 (max. 131072)
  232 words of extra memory for PDF output out of 10000 (max. 100000000)
 

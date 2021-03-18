@@ -14,9 +14,34 @@
 
 
 \begin{frame}
-    \frametitle{Intuition}
+    \frametitle{Intuition: Damped Pendulum}
 
-    
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                \dot{x}_1 &= x_2, \\
+                \dot{x}_2 &= -a \sin{x_1} - bx_2^2.
+            \end{align*}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \underline{Lyapunov function candidate}\\[0.75ex]
+            $ V(x) = a(1 - \cos{x_1}) + \frac{1}{2}x_2^2. $
+        \end{column}
+    \end{columns}
+    \[ \dot{V}(x) = -bx_2^2 \leq 0. \]
+
+    \begin{itemize}
+        \item $\dot{V}(x) < 0$ if and only if $x_2 \neq 0$.
+        \item For the system to maintain $\dot{V}(x) = 0$, it has to stay on
+        $x_2=0$.
+        \item Unless $x_1=0$, this is impossible:
+        \[ x_2(t) \equiv 0 \; \Rightarrow \; \dot{x}_2 \equiv 0 \; \Rightarrow
+        \; \sin{x_1(t)} \equiv 0. \]
+        \item Hence, on the segment $-\pi < x_1 < \pi$ of the $x_2=0$ line, the
+        system can maintain $\dot{V}(x) = 0$ only at the origin $x=0$.
+        \item Therefore, $V(x(t))$ must decrease towards $0$ and, consequently, 
+        \[ x(t) \xrightarrow{t \to \infty} 0. \]
+    \end{itemize}
 \end{frame}
 
 
