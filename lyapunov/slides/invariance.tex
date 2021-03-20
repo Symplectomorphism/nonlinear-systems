@@ -45,4 +45,162 @@
 \end{frame}
 
 
+\begin{frame}
+    \frametitle{Limit and Invariant Sets}
+
+    \begin{definition}[Limit points and limit sets]
+        A point $p$ is said to be a \textit{positive limit point} of $x(t)$ if 
+        there is a sequence $\{t_n\}$, with $t_n \to \infty$ as $n \to \infty$, 
+        such that $x(t_n) \to p$ as $n \to \infty$.
+
+        The set of all positive limit points of $x(t)$ is called the
+        \textit{positive limit set} of $x(t)$.
+    \end{definition}
+
+    \begin{definition}[Positively Invariant Set]
+        A set $M$ is said to be an \textit{invariant set}
+        w.r.t.~\eqref{eq:autonomous} if\\[0.5ex] \hspace{29mm} $ x(0) \in M \;
+        \Rightarrow \; x(t) \in M, \; \forall t \in \mathbb{R}. $\\[0.5ex] That
+        is, if a solution belongs to $M$
+        at some time instant, then it belongs to $M$ for all future and past
+        time.
+
+        A set $M$ is said to be a \textit{positively invariant set} if 
+        \[ x(0) \in M \; \Rightarrow \; x(t) \in M, \; \forall t \geq 0. \]
+    \end{definition}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Distance to an (Invariant) Set }
+
+    \begin{definition}[Distance and Convergence to a Set]
+        We say that $x(t)$ approaches a set $M$ as $t \to \infty$, if for each 
+        $\varepsilon > 0$, $\exists T > 0$ such that\\[0.5ex] 
+        \hspace{22mm} $ \inf_{x \in M} \norm{p-x}{} =: \text{dist}(x(t),  M) <
+        \varepsilon, \; \forall t > T. $\\[0.5ex]
+    \end{definition}
+    %
+    \vspace{-3mm}
+    \begin{itemize}
+        \item An asymptotically stable equilibrium point is the positive limit
+        set of every solution starting sufficiently near the equilibrium point.
+        \item A stable limit cycle is the positive limit set of every solution 
+        starting sufficiently near the limit cycle.
+        \item The solution approaches the limit cycle as $t \to \infty$. Notice:
+        the solution does not approach any specific point on the limit cycle.
+        \item The statement $x(t)$ approaches $M$ as $t \to \infty$ does not
+        imply that $\lim_{t \to \infty} x(t)$ exists.
+        \item The set $\mc{M}_c = \{x \in \mathbb{R}^n: V(x) \leq c\}$ with
+        $\dot{V}(x) \leq 0$ for all $x \in \mc{M}_c$ is a positively invariant
+        set.
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Limit Sets and Krasovskii-LaSalle Theorem}
+
+    \begin{lemma}
+        If a solution $x(t)$ is bounded and belongs to $D$ for $t \geq 0$, then
+        its positive limit set $L^+$ is a nonempty, compact, invariant set.
+        Moreover, $x(t)$ approaches $L^+$ as $t \to \infty$.
+    \end{lemma}
+
+    \begin{theorem}[Krasovskii-LaSalle Theorem]
+        Let $\Omega \subseteq D$ be a compact set that is positively invariant
+        w.r.t.~\eqref{eq:autonomous}. Let $V: D \rightarrow \mathbb{R}$ be a
+        continuously differentiable function such that $\dot{V}(x) \leq 0$ in
+        $\Omega$. Let $E$ be the set of all points in $\Omega$ where $\dot{V}(x)
+        = 0$. Let $M$ be the largest invariant set in $E$. Then every solution
+        starting in $\Omega$ approaches $M$ as $t \to \infty$.
+    \end{theorem}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Krasovskii-LaSalle Theorem}
+
+    \begin{proof}
+        Let $x(t)$ be a solution of~\eqref{eq:autonomous} starting in $\Omega$.
+        Since $\dot{V}(x) \leq 0$ in $\Omega$, $V(x(t))$ is a decreasing
+        function of $t$. Since $V(x)$ is continuous on the compact set $\Omega$,
+        it is bounded from below on $\Omega$. Therefore, $V(x(t))$ has a limit
+        $a$ as $t \to \infty$. Note that the positive limit set $L^+$ is in
+        $\Omega$ because $\Omega$ is a closed set. For any $p \in L^+$, there is
+        a sequence $t_n$ with $t_n \to \infty$ and $x(t_n) \to p$ as $n \to
+        \infty$. By the continuity of $V(x)$, $V(p) = \lim_{n \to \infty}
+        V(x(t_n)) = a$. Hence, $V(x) = a$ on $L^+$. Since $L^+$ is an invariant
+        set, $\dot{V}(x) = 0$ on $L^+$. Thus, \[ L^+ \subseteq M \subseteq E
+        \subseteq \Omega \] Since $x(t)$ is bounded, $x(t)$ approaches $L^+$ as 
+        $t \to \infty$. Hence, $x(t)$ approaches $M$ as $t \to \infty$.
+    \end{proof}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Krasovskii-LaSalle Theorem}
+
+    \begin{itemize}
+        \item Notice that, this theorem does not require the function $V(x)$ to 
+        be positive definite.
+        \item The set $\Omega$ does not have to be tied in with the construction
+        of the function $V(x)$.
+        \item However, in many applications, the construction of $V(x)$ will
+        itself guarantee the existence of a set $\Omega$. In particular, if
+        $\mc{M}_c = \{x \in \mathbb{R}^n: V(x) \leq c\}$ is bounded and
+        $\dot{V}(x) \leq 0$ in $\mc{M}_c$, then we can take $\Omega = \mc{M}_c$.
+        \item When $V$ is positive definite, $\mc{M}_c$ is bounded for
+        sufficiently small $c > 0$. This is not necessarily true when $V$ is not
+        positive definite.
+        \item If $V$ is radially unbounded (or proper), the set $\mc{M}_c$ is
+        bounded for all values of $c$. This is true whether or not $V$ is
+        positive definite.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Corollaries of Krasovskii-LaSalle Theorem}
+
+    \begin{corollary}
+        Let $V: D \rightarrow \mathbb{R}$ be a continuously differentiable
+        positive definite function on a domain $D$ containing the equilibrium
+        point $x=0$, such that $\dot{V}(x) \leq 0$ in $D$. Let $S = \{x \in D:
+        \dot{V}(x) = 0\}$ and suppose that no solution can stay identically in
+        $S$ other than the trivial solution $x(t) \equiv 0$. Then, the origin is
+        asymptotically stable.
+    \end{corollary}
+
+    \begin{corollary}
+        Let $V: \mathbb{R}^n \rightarrow \mathbb{R}$ be a continuously
+        differentiable, radially unbounded, positive defintie function such that
+        $\dot{V}(x) \leq 0$ for all $x \in \mathbb{R}^n$. Let $S = \{x \in
+        \mathbb{R}^n: \dot{V}(x) = 0\}$ and suppose that no solution can stay
+        identically in $S$ other than the trivial solution $x(t) \equiv 0$.
+        Then, the origin is globally asymptotically stable.
+    \end{corollary}
+
+    Notice that when $\dot{V}(x)$ is negative definite, then $S = \{0\}$.
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Remarks on Krasovskii-LaSalle Theorem}
+
+    \begin{itemize}
+        \item The theorem relaxes the negative definiteness requirement of
+        Lyapunov's theorem.
+        \item It further extends Lyapunov's theorem in three different
+        directions.
+        \begin{itemize}
+            \item It gives an estimate of the RoA, which is not necessarily of
+            the form $\mc{M}_c = \{ x \in \mathbb{R}^n: V(x) \leq c\}$. The set
+            $\Omega$ of the theorem can be \textsc{any} compact positively
+            invariant set.
+            \item The theorem can be used in cases where the system has an
+            equilibrium set, rather than an isolated equilibrium point.
+            \item The function $V$ does not have to be positive definite.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
 \endgroup
