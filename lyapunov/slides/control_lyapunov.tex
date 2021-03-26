@@ -1,0 +1,172 @@
+\section{Control-Lyapunov Functions}
+
+\begin{frame}[standout, plain, noframenumbering]
+    Control-Lyapunov Functions
+
+    % \medskip
+
+    % \footnotesize
+    % Sam Greydanus \quad Misko Dzamba \quad Jason Yosinski
+\end{frame}
+
+\begingroup
+\small
+
+\begin{frame}
+    \frametitle{Control-Lyapunov Functions~\footnote[1]{As discussed in
+        \textit{Sontag, ``A `universal' construction of Artstein's theorem on
+        nonlinear stabilization''}, 1989.}}
+
+    Consider the control system with state $x \in \mathbb{R}^n$ and control
+    $u \in \mathbb{R}^m$, $\forall t$:
+    \begin{equation}
+        \dot{x}(t) = f(x(t)) + u_1(t)g_1(x(t)) + \cdots + u_m(t)g_m(x(t)), \;\;\; f(0) = 0.
+        \label{eq:ctrl_system}
+    \end{equation}
+
+    \begin{definition}[Control-Lyapunov Function (clf)]
+        A clf is a smooth, proper, and positive definite function $ V:
+        \mathbb{R}^n \rightarrow \mathbb{R} $ so that
+        \[\inf_{u \in \mathbb{R}^m}\{ \mc{L}_fV(x) + u_1 \mc{L}_{g_1}V(x) +
+        \cdots + u_m \mc{L}_mg_M V(x) \} < 0, \;\; \forall x \neq 0. \]
+    \end{definition}
+
+    \vspace{-3mm}
+    \begin{itemize}
+        \item $V$ is such that for each $x \neq 0$, one \textit{can} diminish
+        its value by applying \textit{some} open-loop control.
+        \item Existence of a clf implies that the system is asymp. controllable: 
+    \end{itemize}
+    \vspace{2mm}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Control-Lyapunov Functions: Single input}
+    There exists a feedback law which is smooth on $\mathbb{R}_0^n :=
+    \mathbb{R}^n - 0$
+    \vspace{-1mm}
+    \begin{equation*}
+        u = k(x), \quad k(0) = 0,
+        \vspace{-1mm}
+    \end{equation*}
+    and which globally stabilizes the system.
+
+    Assume $V$ is a clf for the system
+    \vspace{-1mm}\[ \dot{x} = f(x) + u g(x) \vspace{-1mm}. \] Denote
+    \vspace{-3mm}
+    \begin{align*}
+        a(x) &:= \nabla V(x) \cdot f(x), \\
+        b(x) &:= \nabla V(x) \cdot g(x).
+        \vspace{-3mm}
+    \end{align*}
+    The condition that $V$ is a clf is precisely the statement that 
+    \[ b(x) = 0 \implies a(x) < 0, \quad \forall x \neq 0. \] On the other hand,
+    $V$ is a Lyapunov function if \vspace{-1mm}\[ \nabla V(x) \cdot \left( f(x)
+    + k(x)g(x) \right) < 0, \] that is \[ a(x) + k(x) b(x) < 0, \quad \forall x
+    \neq 0. \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Control-Lyapunov Functions: Single input}
+
+    In this simple case where the family $\left( a(x), b(x) \right)$,
+    interpreted as a \textit{family of linear systems parametrized by $x$} the
+    following works: \[ k := -\frac{1}{b}\left( a + \sqrt{a^2 +
+    b^2} \right). \] Along trajectories of the closed-loop system, one has 
+    \[ \frac{\dd V}{\dd t} = -\sqrt{a^2 + b^2} < 0. \] This feedback law may
+    fail to be continuous, but with the slight modification \[ k :=
+    -\frac{1}{b}\left( a + \sqrt{a^2+b^4} \right), \] then it does become
+    continuous.
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Control-Lyapunov Functions: Multi input}
+
+    Now, consider the system back in equation~\eqref{eq:ctrl_system}. 
+    
+    \begin{itemize}
+        \item A sufficient conditions for a given $k$ to be smooth feedback
+        stabilizer is that there exist a Lyapunov function $V$ so that \[ \nabla
+        V(x) \cdot \left[ f(x) + k_1(x)g_1(x) + \cdots + k_m(x)g_m(x) \right] <
+        0, \;\; \forall x \neq 0. \] 
+        \item Such a Lyapunov function is automatically a clf.
+        \item If $k$ happens to be continous at the origin, then the following
+        property (\texttt{small control property}) holds (with $u := k(x)$) \\
+        \textit{
+            For each $\varepsilon > 0$, there is $\delta > 0$ s.t., if $x \neq 0$ 
+            satisfies $\norm{x}{} < \delta$, then there is some 
+            $u$ with $\norm{u}{} < \varepsilon$ s.t.
+            \[\nabla V(x) \cdot \left[ f(x) + u_1g_1(x) + \cdots + u_mg_m(x) 
+            \right] < 0. \]
+        }
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Control-Lyapunov Functions: Multi input}
+
+    \begin{theorem}
+        If $\exists$ a smooth clf $V$ then $\exists$ a smooth feedback
+        stabilizer $k$. If $V$ satisfies the small control property, then $k$ 
+        can be chosen to be also continuous at $0$.
+    \end{theorem}
+
+    \begin{proof}[Proof. (Sketch)]
+        The proof involves constructing a fixed function $\phi$ of two
+        variables, and then designing a feedback law in closed-form, from the
+        evaluation of this function at a point determined by $\nabla V(x) \cdot
+        f(x)$ and the $\nabla V(x) \cdot g_i(x)$'s.
+
+        Define the following function (and then show that it is analytic.)
+        \[ \phi(a, 0) := 0, \quad \forall a < 0 \] and \[ \phi(a,b) :=
+        \frac{1}{b}\left( a^2 + bq(b) \right), \quad q(0) = 0 \; \text{ and } \;
+        bq(b) > 0. \]
+        For example, we can choose $q(b) = b$ or $q(b) = b^3$, etc.
+    \end{proof}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Control-Lyapunov Functions: Multi input}
+
+    \begin{proof}[Proof. (Cont'd)]
+        Assume that $V$ is a clf and let 
+        \begin{align*}
+            a(x) &:= \nabla V(x) \cdot f(x), \\
+            b_i(x) &:= \nabla V(x) \cdot g_i(x), \;\; i=1,\ldots,m.
+        \end{align*}
+        Further, let
+        \begin{align*}
+            B(x) &:= (b_1(x), \ldots, b_m(x)), \\
+            \beta(x) &:= \norm{B(x)}{}^2 = \sum_{i=1}^m b_i^2(x).
+        \end{align*}
+        The condition that $V$ is a clf is equivalent to $\beta(x) = 0 \implies
+        a(x) < 0$. Now, define the smooth feedback law $k = (k_1, \ldots, k_m)$: \[
+        k_i(x) := -b_i(x)\phi(a(x), \beta(x)), \quad x \neq 0, \] and $k(0) :=
+        0$.
+    \end{proof}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Control-Lyapunov Functions: Multi input}
+
+    \begin{proof}[Proof. (Cont'd)]
+        At a nonzero $x$ we have that 
+        \begin{align*}
+            \nabla V(x) \cdot \left[ f(x) + \sum_{i=1}^m k_i(x)g_i(x) \right]
+            &= a(x) - \phi\left( a(x), \beta(x) \right)\beta(x) \\
+            &= -\sqrt{a(x)^2 + \beta(x)q\left( \beta(x) \right)} < 0.
+        \end{align*}
+        so the original $V$ decreases along trajectories of the closed-loop
+        system.
+
+        We have still yet to show that $V$ satisfies the small control property.
+        The audience is invited to see the paper for the detailed proof of this.
+        \hfill \qed
+    \end{proof}
+\end{frame}
+
+
+\endgroup

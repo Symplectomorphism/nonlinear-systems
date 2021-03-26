@@ -84,7 +84,7 @@
 \headcommand {\beamer@framepages {37}{37}}
 \headcommand {\beamer@sectionpages {29}{37}}
 \headcommand {\beamer@subsectionpages {29}{37}}
-\headcommand {\sectionentry {5}{Morse-Lyapunov Functions}{38}{Morse-Lyapunov Functions}{0}}
+\headcommand {\sectionentry {5}{Control-Lyapunov Functions}{38}{Control-Lyapunov Functions}{0}}
 \headcommand {\slideentry {5}{0}{1}{38/38}{}{0}}
 \headcommand {\beamer@framepages {38}{38}}
 \headcommand {\slideentry {5}{0}{2}{39/39}{}{0}}
@@ -93,30 +93,18 @@
 \headcommand {\beamer@framepages {40}{40}}
 \headcommand {\slideentry {5}{0}{4}{41/41}{}{0}}
 \headcommand {\beamer@framepages {41}{41}}
-\headcommand {\beamer@sectionpages {38}{41}}
-\headcommand {\beamer@subsectionpages {38}{41}}
-\headcommand {\sectionentry {6}{Systems with Single Critical Points}{42}{Systems with Single Critical Points}{0}}
-\headcommand {\slideentry {6}{0}{1}{42/42}{}{0}}
+\headcommand {\slideentry {5}{0}{5}{42/42}{}{0}}
 \headcommand {\beamer@framepages {42}{42}}
-\headcommand {\slideentry {6}{0}{2}{43/43}{}{0}}
+\headcommand {\slideentry {5}{0}{6}{43/43}{}{0}}
 \headcommand {\beamer@framepages {43}{43}}
-\headcommand {\slideentry {6}{0}{3}{44/44}{}{0}}
+\headcommand {\slideentry {5}{0}{7}{44/44}{}{0}}
 \headcommand {\beamer@framepages {44}{44}}
-\headcommand {\beamer@sectionpages {42}{44}}
-\headcommand {\beamer@subsectionpages {42}{44}}
-\headcommand {\sectionentry {7}{Systems with Multiple Critical Points}{45}{Systems with Multiple Critical Points}{0}}
-\headcommand {\slideentry {7}{0}{1}{45/45}{}{0}}
+\headcommand {\slideentry {5}{0}{8}{45/45}{}{0}}
 \headcommand {\beamer@framepages {45}{45}}
-\headcommand {\slideentry {7}{0}{2}{46/46}{}{0}}
+\headcommand {\slideentry {5}{0}{9}{46/46}{}{0}}
 \headcommand {\beamer@framepages {46}{46}}
-\headcommand {\slideentry {7}{0}{3}{47/47}{}{0}}
-\headcommand {\beamer@framepages {47}{47}}
-\headcommand {\slideentry {7}{0}{4}{48/48}{}{0}}
-\headcommand {\beamer@framepages {48}{48}}
-\headcommand {\slideentry {7}{0}{5}{49/49}{}{0}}
-\headcommand {\beamer@framepages {49}{49}}
-\headcommand {\beamer@partpages {1}{49}}
-\headcommand {\beamer@subsectionpages {45}{49}}
-\headcommand {\beamer@sectionpages {45}{49}}
-\headcommand {\beamer@documentpages {49}}
-\headcommand {\gdef \inserttotalframenumber {38}}
+\headcommand {\beamer@partpages {1}{46}}
+\headcommand {\beamer@subsectionpages {38}{46}}
+\headcommand {\beamer@sectionpages {38}{46}}
+\headcommand {\beamer@documentpages {46}}
+\headcommand {\gdef \inserttotalframenumber {37}}

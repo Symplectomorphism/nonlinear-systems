@@ -2,6 +2,4 @@
 \beamer@sectionintoc {2}{Notations and Definitions}{6}{0}{2}
 \beamer@sectionintoc {3}{Lyapunov Stability Analysis on Euclidean Spaces}{14}{0}{3}
 \beamer@sectionintoc {4}{The Invariance Principle}{29}{0}{4}
-\beamer@sectionintoc {5}{Morse-Lyapunov Functions}{38}{0}{5}
-\beamer@sectionintoc {6}{Systems with Single Critical Points}{42}{0}{6}
-\beamer@sectionintoc {7}{Systems with Multiple Critical Points}{45}{0}{7}
+\beamer@sectionintoc {5}{Control-Lyapunov Functions}{38}{0}{5}
