@@ -250,6 +250,105 @@
 
 
 \begin{frame}
+    \frametitle{Example: Rotational Motion of a Rigid Body in $3$D-space}
+
+    With respect to a coordinate system frame, which is rigidly attached to the
+    body and whose axes are chosen to be the principal axes of the body, define:
+    \begin{itemize}
+        \item $\omega$: angular velocity of the body,
+        \item $I \in \mathbb{S}_{++}^3$: inertia matrix of the body.
+    \end{itemize}
+    In the absence of external torques, the motion is described by
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \[ I \dot{\omega} + \omega \times I \omega = 0. \]
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                I_x \dot{\omega}_x &= - (I_z - I_y) \omega_y \omega_z, \\
+                I_y \dot{\omega}_y &= - (I_x - I_z) \omega_x \omega_z, \\
+                I_z \dot{\omega}_z &= - (I_y - I_x) \omega_x \omega_y.
+            \end{align*}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Example: Rotational Motion of a Rigid Body in $3$D-space}
+
+    Suppose w.l.o.g., that $I_x \geq I_y \geq I_z > 0$. For notational
+    simplicity, define
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                \omega_x &\mapsto x \\
+                \omega_y &\mapsto y \\
+                \omega_z &\mapsto z
+            \end{align*}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{align*}
+                a &= \frac{I_y - I_z}{I_x}, \\
+                b &= \frac{I_x - I_z}{I_y}, \\
+                c &= \frac{I_x - I_y}{I_z}.
+            \end{align*}
+        \end{column}
+    \end{columns}
+    Note that $a, b, c, \geq 0$. The equations of motion assumes the form
+    \[ \dot{x} = ayz, \;\; \dot{y} = -bxz, \;\; \dot{z} = cxy. \]
+
+    From here on out, assume that the principal axes are unique; this is
+    equivalent to assuming that $I_x > I_y > I_z$, or that $a, b, c > 0$.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example: Rotational Motion of a Rigid Body in $3$D-space}
+
+    The set of equilibria is \[ \left( \mathbb{R} \times \{0\} \times \{0\}
+    \right) \cup \left( \{0\} \times \mathbb{R} \times \{0\} \right) \cup
+    \left( \{0\} \times \{0\} \times \mathbb{R} \right). \] \vspace{-4mm}
+    \begin{block}{Remark}
+        Physically this corresponds to rotation around one of the principal axes
+        at a constant angular velocity. Note that none of the equilibria is
+        isolated.
+    \end{block}
+    \vspace{-2mm}
+    Consider first, the equilibrium at the origin and try \[ V(x,y,z) = px^2 +
+    qy^2 + rz^2, \] where $p,q,r > 0$. Then $V$ is a lpdf. Computing $\dot{V}$:
+    \[ \dot{V} = 2(px\dot{x} + qy\dot{y} + rz\dot{z}) = 2xyz(ap - bq + cr). \]
+    Clearly, it is possible to choose $p,q,r > 0$ such that \[ ap - bq + cr = 0.
+    \] For such a choice, $\dot{V} \equiv 0$ and the origin is \textsc{stable}.
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Example: Rotational Motion of a Rigid Body in $3$D-space}
+
+    Next, consider the equilibrium of the form $(x_0, 0, 0)$ where $x_0 \neq 0$.
+
+    Consider the Lyapunov function candidate $W$, such that $W(x_0, 0, 0) = 0$,
+    and $W(x,y,z) > 0, \; \forall (x,y,z) \neq (x_0, 0, 0)$ and sufficiently
+    near $(x_0, 0, 0)$: \[ W(x,y,z) = cy^2 + bz^2 + \left[ 2acy^2 + abz^2 +
+    bc(x^2 - x_0^2) \right]^2 \]
+
+    $W$ is an lpdf w.r.t. the equilibrium $(x_0, 0, 0)$ and routine computations 
+    show that $\dot{W} \equiv 0$. Hence $(x_0, 0, 0)$ is a stable equilibrium.
+
+    \begin{block}{Discussion}
+        \begin{itemize}
+            \item We could also translate the coordinates such that $(x_0, 0,
+            0)$ becomes the origin of the new coordinate system and apply the
+            Lyapunov stability theorem directly.
+            \item Is $(0, 0, z_0)$, $z_0 \neq 0$ stable?
+            \item Is $(0, y_0, 0)$, $y_0 \neq 0$ (w.l.o.g., assume $y_0 > 0$)
+            stable?
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
     \frametitle{Region of Attraction}
 
     \begin{definition}[Region of Attraction]
@@ -345,6 +444,25 @@
         0$ since $V(x(t)) \geq a$. Hence it must leave $U$ through the sphere
         $\mathbb{S}_r$. Note: $\norm{x_0}{}$ was arbitrarily small. \hfill \qed
     \end{proof}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Example: Rotational Motion of a Rigid Body}
+
+    Consider an equilibrium of the form $(0, y_0, 0)$, $y_0 > 0$ and translate
+    the coordinates so that the equilibrium under study becomes the origin.
+    Setting $y_s = y - y_0$, the equations of motion are
+    \[ \dot{x} = ay_sz + ay_0z, \;\; \dot{y}_s = -bxz, \;\; \dot{z} = cxy_s +
+    cxy_0. \] Now, apply Chetaev's theorem with 
+    \begin{align*}
+        V(x,y,z) &= xz, \\
+        B_r &= \{ (x,y_s,z): x^2 + y_s^2 + z^2 < r^2 \}, \\
+        U &= \{ (x,y_s,z) \in B_{\frac{r}{2}}: x > 0 \text{ and } z > 0 \}.
+    \end{align*}
+    Then $U$ is open and \[ \dot{V} = x\dot{z} + \dot{x}z = 2(y_s + y_0)(cx^2 +
+    az^2). \] If $(x,y_s,z) \in U$, then $y_s + y_0 > 0$, so Chetaev's theorem 
+    yields that the origin (in the new coordinate system) is \textsc{unstable}.
 \end{frame}
 
 \endgroup

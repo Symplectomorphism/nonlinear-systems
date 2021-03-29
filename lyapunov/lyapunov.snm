@@ -1,2 +1,4 @@
 \beamer@slide {eq:autonomous}{15}
-\beamer@slide {eq:ctrl_system}{39}
+\beamer@slide {eq:lin_system}{45}
+\beamer@slide {eq:lyap_matrix}{46}
+\beamer@slide {eq:ctrl_system}{50}

@@ -1,0 +1,110 @@
+\section{Stability of Linear Systems}
+
+\begin{frame}[standout, plain, noframenumbering]
+    Stability of Linear Systems
+
+    % \medskip
+
+    % \footnotesize
+    % Sam Greydanus \quad Misko Dzamba \quad Jason Yosinski
+\end{frame}
+
+\begingroup
+\small
+
+
+
+\begin{frame}
+    \frametitle{Autonomous Linear Systems}
+
+    We restrict our attention to linear \textit{autonomous} systems of the form 
+    \begin{equation}
+        \dot{x}(t) = A x(t).
+        \label{eq:lin_system}
+    \end{equation}
+
+    \begin{theorem}
+        The equilibrium $0$ of~\eqref{eq:lin_system} is (globally) exponentially
+        stable iff all eigenvalues of $A$ have negative real parts. The eq. is
+        stable iff all eigenvalues of $A$ have nonpositive real parts, and in
+        addition, every eigenvalues of $A$ having a zero real part is a simple
+        zero of the minimal polynomial of $A$.
+    \end{theorem}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Lyapunov Function}
+
+    Given the system~\eqref{eq:lin_system}, we choose a Lyapunov function
+    candidate: \[ V(x) = x^\top P x \implies \dot{V} = \dot{x}^\top P x + x^\top
+    P \dot{x} = - x^\top Q x, \] where $P = P^\top$ and 
+    \begin{equation}
+        A^\top P + PA = -Q.
+        \label{eq:lyap_matrix}
+    \end{equation}
+    Equation~\eqref{eq:lyap_matrix} is commonly known as the \textbf{Lyapunov
+    Matrix Equation}.
+    \begin{rem}[Stability]
+        If a pair of matrices $(P, Q)$ satisfying~\eqref{eq:lyap_matrix} can be
+        found such that both $P$ and $Q$ are positive definite, then both $V$
+        and $-\dot{V}$ are positive definite functions and $V$ is radially
+        unbounded. Hence, the equilbirium $0$ is globally exponentially stable.
+
+        If a pair $(P, Q)$ can be found s.t. $Q > 0$ and $P$ has at least one
+        nonpositive eigenvalue, then $-\dot{V} > 0$ and $V$ assumes nonpositive
+        values arbitrarily close to the origin. Hence $0$ is unstable.
+    \end{rem}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Lyapunov Matrix Equation}
+
+    \begin{lemma}
+        Let $\{\lambda_i\}_1^n$ denote the eigenvalues of $A$. Then
+        equation~\eqref{eq:lyap_matrix} has a unique solution for $P$
+        corresponding to each $Q \in \mathbb{R}^{n \times n}$ iff \[ \lambda_i +
+        \lambda_j \neq 0, \;\; \forall i, j. \]
+    \end{lemma}
+
+    \begin{corollary}
+        If for some $Q \in \mathbb{R}^{n \times n}$ does not have a unique
+        solution for $P$, then the origin is not an asymptotically stable
+        equilibrium.
+    \end{corollary}
+    \begin{proof}
+        If all eigenvalues of $A$ has negative real parts, then the equation 
+        above is satisfied. \hfill \qed
+    \end{proof}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Main Result}
+
+    \begin{theorem}
+        Given a matrix $A \in \mathbb{R}^{n \times n}$, the following are
+        equivalent:
+        \begin{itemize}
+            \item $A$ is a Hurwitz matrix (all its e.vals have negative real parts).
+            \item There exists \textsc{some} $Q \in \mathbb{S}_{++}^n$ such that
+            equation~\eqref{eq:lyap_matrix} has a corresponding unique solution
+            for $P \in \mathbb{S}_{++}^n$.
+            \item For \textsc{every} $Q \in \mathbb{S}_{++}^n$,
+            equation~\eqref{eq:lyap_matrix} has a unique solution for $P \in
+            \mathbb{S}_{++}^n$.
+        \end{itemize}
+    \end{theorem}
+    \begin{proof}
+        ``$(3) \implies (2)$'' Obvious. \\
+        ``$(2) \implies (1)$'' Suppose $(2)$ is true for some particular matrix
+        $Q$. Consider the candidate $V(x) = x^\top P x$. Then $\dot{V}(x) =
+        -x^\top Q x$, and one can conclude that $0$ is asymptotically stable. 
+        Hence $A$ is Hurwitz. \\
+        ``$(1) \implies (3)$'' Omitted (see Section 5.4, Theorem (42) in
+        Vidyasagar, ``\textit{Nonlinear Systems Analysis}'', 1993.)
+    \end{proof}
+\end{frame}
+
+
+\endgroup
