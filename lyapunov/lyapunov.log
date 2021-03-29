@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.4.24)  28 MAR 2021 23:45
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.4.24)  28 MAR 2021 23:46
  restricted system commands enabled.
  file:line:error style messages enabled.
 **/home/aykut/repos/courses/nonlinear_systems/lyapunov/lyapunov.tex
@@ -1741,7 +1741,7 @@ Here is how much of LuaTeX's memory you used:
  146 fonts using 26594907 bytes
  74i,14n,123p,1883b,831s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2020/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/fira/FiraSans-LightItalic.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/fira/FiraSans-Light.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/fira/FiraSans-Book.otf></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on lyapunov.pdf (57 pages, 565909 bytes).
+Output written on lyapunov.pdf (57 pages, 565905 bytes).
 
 PDF statistics: 590 PDF objects out of 1000 (max. 8388607)
  473 compressed objects within 5 object streams
