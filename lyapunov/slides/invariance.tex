@@ -205,8 +205,118 @@
 
 
 \begin{frame}
-    \frametitle{Example: Stabilization of a Rigid Robot}
+    \frametitle{Example: Stabilization of a Rigid Robot without Gravity}
+
+    \begin{block}{Setup}
+        Let $q = (q_1, \ldots, q_n)$ denote the vector of generalized
+        coordinates of the robot and $u = (u_1, \ldots, u_n)$ denote the vector
+        of generalized forces. The dynamics are given by the Euler-Lagrange
+        equations \[ \frac{\dd}{\dd t} \pd{L}{\dot{q}} - \pd{L}{q} = u, \] where
+        $L$ is the Lagrangian of the system. Since there is no gravity, the
+        potential energy $\mc{P} = 0$ can be taken. Thus, \[ L = K =
+        \frac{1}{2}\dot{q}^\top M(q) \dot{q}. \] $M(q) \in \mathbb{S}_{++}^n$ is
+        called the \textbf{inertia matrix}. There exist positive constants
+        $\alpha$ and $\beta$ such that \[ 0 < \alpha \leq
+        \lambda_{\text{min}}\left[M(q)\right] \leq
+        \lambda_{\text{max}}\left[M(q)\right] \leq \beta, \;\; \forall q. \]
+    \end{block}
 \end{frame}
 
+\begin{frame}
+    \frametitle{Example: Stabilization of a Rigid Robot without Gravity}
+
+    \begin{block}{The Euler-Lagrange equations}
+         With $L=K$, we have \[ \sum_{j=1}^n m_{ij}(q)\ddot{q}_j + \sum_{j=1}^n
+         \sum_{k=1}^n c_{ijk}(q) \dot{q}_j \dot{q}_k = u_i, \;\; i = 1, \ldots,
+         n, \] where \[ c_{ijk} = \frac{1}{2} \left( \pd{m_{ik}}{q_j} +
+         \pd{m_{ij}}{q_k} - \pd{m_{jk}}{q_i} \right) \] are called the
+         \textit{Christoffel symbols}. Compactly, we have \[ M(q) \ddot{q} +
+         C(q,\dot{q})\dot{q} = u, \] where the $(i,j)^{\text{th}}$ element of
+         $C(q,\dot{q})$ is \[ c_{ij}(q,\dot{q}) = \sum_{k=1}^n
+         c_{ijk}(q)\dot{q}_k. \]
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Example: Stabilization of a Rigid Robot without Gravity}
+
+    \begin{block}{State equations and na\"{i}ve control}
+        Introduce the state variables $x = q$, $y = \dot{q}$ so that 
+        \[ \dot{x} = y, \qquad \dot{y} = \left[ M(x) \right]^{-1} \left[ u -
+        C(x,y)y \right]. \]
+
+        Suppose we want to asymptotically stabilize the state $(x,y)$ to a
+        desired value $(x_d, 0)$. Let us try the na\"{i}ve control law
+        \[ u = -K_p(x - x_d) - K_dy, \] where $K_p, K_d \in \mathbb{S}_{++}^n$.
+        The closed-loop dynamics become \[ \dot{x} = y, \qquad \dot{y} = 
+        -\left[ M(x) \right]^{-1}\left[ K_p(x-x_d) + K_dy + C(x,y)y \right]. \]
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Example: Stabilization of a Rigid Robot without Gravity}
+
+    \begin{block}{Lyapunov analysis}
+        Consider the Lyapunov function candidate \[ V = \frac{1}{2} \left[y^\top
+        M(x) y + (x-x_d)^\top K_p (x-x_d) \right]. \] The first term is the
+        kinetic energy, while the second term is the potiential energy due to
+        proportional feedback. Note that
+        \[ \frac{\dd}{\dd t}\left[ m_{ij}(x) \right] = \sum_{k=1}^n
+        \pd{m_{ij}(x)}{x_k}y_k. \] Define the $(i,j)^{\text{th}}$ element
+        of $\dot{M}(x,y) \in \mathbb{R}^{n \times n}$ by the RHS above. Now, 
+        \begin{align*}
+            \dot{V} &= y^\top M(x) \dot{y} + \frac{1}{2}y^\top\dot{M}(x,y)y + \dot{x}^\top K_p (x - x_d) \\
+            &= -y^\top \left[ K_p(x-x_d) + K_dy + C(x,y)y \right] + \frac{1}{2}y^\top \dot{M}(x,y)y + y^\top K_p (x-x_d) \\
+            &= -y^\top K_d y + \frac{1}{2}y^\top \left[ \dot{M}(x,y) - 2C(x,y) \right]y = -y^\top K_d y + \frac{1}{2} y^\top D(x,y) y.
+        \end{align*}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example: Stabilization of a Rigid Robot without Gravity}
+    \only<1>{
+    \begin{block}{Skew-symmetry of $D(x,y) := \dot{M}(x,y) - 2C(x,y)$}
+        We perform the computations in coordinates
+        
+        \begin{align*}
+            d_{ij} = \dot{m}_{ij} - 2c_{ij} &= \left[ \sum_{k=1}^n 
+            \pd{m_{ij}}{x_k} - \left( \pd{m_{ik}}{x_j} + 
+            \pd{m_{ij}}{x_k} - \pd{m_{jk}}{x_i} \right) \right]y_k
+        \end{align*}
+    \end{block}
+    }
+    \onslide<2->{
+    \begin{block}{Skew-symmetry of $D(x,y) := \dot{M}(x,y) - 2C(x,y)$}
+        \begin{align*}
+            d_{ij} = \dot{m}_{ij} - 2c_{ij} &= \left[ \sum_{k=1}^n 
+            \cancel{\pd{m_{ij}}{x_k}} - \left( \pd{m_{ik}}{x_j} + 
+            \cancel{\pd{m_{ij}}{x_k}} - \pd{m_{jk}}{x_i} \right) \right]y_k \\
+            &= \sum_{k=1}^n \left( \pd{m_{jk}}{x_i} - \pd{m_{ik}}{x_j} \right)y_k.
+        \end{align*}
+        %
+        Interchanging $i$ and $j$ gives
+        \[ d_{ji} = \sum_{k=1}^n \left( \pd{m_{ik}}{x_j} - \pd{m_{jk}}{x_i} \right)y_k = -d_{ij} \]
+    \end{block}
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{Example: Stabilization of a Rigid Robot without Gravity}
+
+    \begin{block}{Lyapunov analysis -- resumed}
+        Hence $D$ is skew-symmetric and hence $y^\top D y = 0$, so that
+        \[\dot{V} = -y^\top K_d y \leq 0. \] The set $E$ of Krasovskii-LaSalle
+        theorem is given by \[ E = \{ (x,y) \in \mathbb{R}^n \times
+        \mathbb{R}^n: \dot{V} \equiv 0 \} = \mathbb{R}^n \times \{0\}. \]
+        Suppose $(x(t), y(t))$ is a trajectory that lies entirely in $E$. Then
+        \[ y \equiv 0 \implies \dot{y} \equiv 0 \implies K_p(x-x_d) \equiv 0
+        \implies x \equiv x_d, \;\; \forall t \geq 0. \] Hence $E$ contains no 
+        trajectories of the system other than the equilibrium $(x_d, 0)$. It 
+        follows from the Krasovskii-LaSalla theorem that this equilibrium is 
+        \textsc{globally asymptotically stable}.
+    \end{block}
+\end{frame}
 
 \endgroup
