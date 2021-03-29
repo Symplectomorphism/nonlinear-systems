@@ -1,0 +1,30 @@
+\bonusquestion[20]
+%
+Show that a continuously differentiable map $f: \mathbb{R}^n \rightarrow
+\mathbb{R}$ with $f(x) \geq 0$ is radially unbounded if and only if it is proper
+(inverse images of compact sets under $f$ are compact).
+
+\begin{solution}
+
+``($\Rightarrow$)'' Assume that $f(x) \xrightarrow{\norm{x}{} \to \infty}
+\infty$. We want to show that for all compact $K \subseteq \mathbb{R}$,
+$f^{-1}(K) \subseteq \mathbb{R}^n$ is compact. Since $f$ is continuous, the
+inverse images of closed sets under $f$ are closed sets. It remains to show that
+if $K$ is (closed and) bounded in $\mathbb{R}$ then $f^{-1}(K)$ is bounded on
+$\mathbb{R}^n$. Let $c = \max\{ x \in K \subseteq \mathbb{R} \}$ and consider
+the set $f^{-1}([0, c])$. Notice that $f^{-1}(K) \subseteq f^{-1}([0,c]) = \{ x
+\in \mathbb{R}^n: f(x) \leq c \}$. But since $f$ is radially unbounded, there
+exists a $\delta \in \mathbb{R}$ such that whenever $x \in B_\delta(0)$, $f(x) >
+c$. That is to say, $f^{-1}(K) \subseteq f^{-1}([0,c]) \subseteq B_\delta(0)$.
+Hence $f^{-1}(K)$ is closed and bounded, i.e., compact, showing that $f$ is
+proper.
+
+``($\Leftarrow$)'' Assume that $f$ is proper so that $f^{-1}(K)$ is compact
+whenever $K \subseteq \mathbb{R}$ is. We want to show that $f(x)
+\xrightarrow{\norm{x}{} \to \infty} \infty$. Argue ad absurdum. Suppose $f(x)$
+does not approach $\infty$ as $\norm{x}{} \to \infty$. This means that there
+exists $c \in \mathbb{R}$ such that $f(x) < c$ for all $x \in \mathbb{R}^n$. But
+then $f^{-1}([0,c]) = \mathbb{R}^n$, which is not compact. This contradicts the
+fact that $f$ is proper. \hfill \qed
+
+\end{solution}

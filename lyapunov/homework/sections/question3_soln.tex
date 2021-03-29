@@ -1,0 +1,38 @@
+\question
+%
+Consider the autonomous differential equation \[ \dot{x}(t) = f(x(t)), \] and
+suppose $f$ is a $C^1$ function such that $f(0) = 0$. Then there exists a $C^1$
+matrix-valued function $A$ such that \[ f(x) = A(x)x, \;\; \forall x \in
+\mathbb{R}^n. \]
+
+\begin{parts}
+
+\part[15] Show that if the matrix $A^\top(0) + A(0)$ is negative definite, then the
+origin is an exponentially stable equilibrium. More generally, show that if
+there exists a positive definite matrix $P$ such that $A^\top(0)P + PA(0)$ is
+negative definite, then the origin is an exponentially stable equilibrium.
+(Hint: Consider the Lyapunov function candidate $V(x) = \norm{x}{}^2$.)
+
+\begin{solution}
+
+Let $V(x) = x^\top x$ so that \[\dot{V}(x) = x^\top \left(A(x)^\top + A(x)
+\right) x. \] Since $\dot{V}$ is a continuous function $\dot{V}(x) < 0$ in a
+suitable neighborhood of the origin whenever $A(0)^\top + A(0)$ is negative
+definite.
+
+More generally, let $V(x) = x^\top P x$ so that 
+\[ \dot{V}(x) = x^\top \left( A(x)^\top P + P A(x) \right) x. \] By the same 
+reasoning above, $\dot{V}$ is negative in a neighborhood of the origin whenever 
+$A^\top(0) P + PA(0)$ is negative definite.
+
+\end{solution}
+
+\part[5] Extend the results in $(a)$ to global stability.
+
+\begin{solution}
+    If the matrix $A(x)^\top P + P A(x)$ is negative definite for all $x$, then
+    $\dot{V}$ is negative over all of $\mathbb{R}^n$ and hence the origin is
+    globally asymptotically stable.
+\end{solution}
+
+\end{parts}

@@ -1,0 +1,27 @@
+\question[20] Suppose a particle of mass $m$ is moving in a smooth potential
+field. To simplify the problem, suppose the motion is one-dimensional. Let $x$
+denote the position coordinate of the particle, and let $\phi(x)$ denote the
+potential energy at $x$. If the only force acting on the particle is due to the
+potential, then the motion of the particle is described by \[ m \ddot{x} =
+-\phi^\prime(x) =: f(x), \] where the prime denotes differentiation with respect
+to $x$. Show that every local minimum of the function $\phi$ is a stable
+equilibrium.
+
+
+\begin{solution}
+
+Let $x_0$ be a local minimum of the function $\phi$. Notice that this is an
+equilibrium point since $\phi^\prime(x_0) = 0$. Consider the Lyapunov function
+candidate
+
+\[ V(x) = \frac{1}{m}\left( \phi(x)- \phi(x_0) \right) + \frac{1}{2}\dot{x}^2. \]
+
+Computing the time derivative of $V$ along the trajectories of the system gives 
+
+\[ \dot{V}(x) = \frac{1}{m}\phi^\prime(x)\dot{x} + \dot{x}\ddot{x} =
+\frac{1}{m}\phi^\prime(x)\dot{x} + \dot{x}\left( -\frac{\phi^\prime(x)}{m}
+\right) = 0. \]
+
+Hence, the equilibrium point $x_0$ is stable.
+
+\end{solution}

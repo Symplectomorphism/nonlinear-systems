@@ -1,0 +1,17 @@
+\question[20]
+%
+Given a finite collection of $n \times n$ matrices $A_1, \ldots, A_k$, define 
+their \textit{convex hull} $S$ as \[ S = \{A = \sum_{i=1}^k \lambda_i A_i: 
+\lambda_i \geq 0, \; \forall i, \sum_{i=1}^k \lambda_i = 1 \}. \]
+
+\begin{parts}
+
+\part Suppose there exists a positive definite matrix $P$ such that $A_i^\top P
++ PA_i$ is negative definite for each $i$ between $1$ and $k$. Show that every 
+matrix in the set $S$ is Hurwitz.
+
+\part Consider the differential equation \[ \dot{x}(t) = A(t)x(t), \;\;
+\text{where } A(t) \in S, \;\; \forall t \geq 0. \] Show that $0$ is an 
+exponentially stable equilibrium of this system.
+
+\end{parts}

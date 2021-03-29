@@ -1,0 +1,42 @@
+\question[20]
+%
+Given a finite collection of $n \times n$ matrices $A_1, \ldots, A_k$, define 
+their \textit{convex hull} $S$ as \[ S = \{A = \sum_{i=1}^k \lambda_i A_i: 
+\lambda_i \geq 0, \; \forall i, \sum_{i=1}^k \lambda_i = 1 \}. \]
+
+\begin{parts}
+
+\part Suppose there exists a positive definite matrix $P$ such that $A_i^\top P
++ PA_i$ is negative definite for each $i$ between $1$ and $k$. Show that every 
+matrix in the set $S$ is Hurwitz.
+
+\begin{solution}
+
+\underline{Claim:} A convex combination of positive definite matrices is
+positive definite.
+\underline{Proof.} Let $\{Q_i\}_{i=1}^k$ be a set of positive definite matrices 
+and let $\{\lambda_i\}_{i=1}^k$ be nonnegative with $\sum_{i=1}^k \lambda_i = 1$.
+Let $x \in \mathbb{R}^n$ be arbitrary and consider the quadratic form
+\[ x^\top \left( \sum_{i=1}^k \lambda_i Q_i \right) x = \sum_{i=1}^k \lambda_i 
+\left( x^\top Q_i x \right) > 0, \;\; \forall x \neq 0. \]
+ 
+Let $A = \sum_{i=1}^k \lambda_i A_i$ be a convex combination of $A_i$'s. We have 
+\[ A^\top P + PA = \sum_{i=1}^k \lambda_i \left( A_i^\top P + PA_i \right) =:
+-\sum_{i=1}^k \lambda_i Q_i =: Q < 0. \] 
+
+\end{solution}
+
+\part Consider the differential equation \[ \dot{x}(t) = A(t)x(t), \;\;
+\text{where } A(t) \in S, \;\; \forall t \geq 0. \] Show that $0$ is an 
+exponentially stable equilibrium of this system.
+
+\begin{solution}
+    
+Let $V(x) = x^\top P x$. We have 
+\[ \dot{V} = x^\top (A(t)^\top P + PA(t)) \leq -x^\top Q x < 0, \] where
+\[ Q = \arg \inf_t \left\{ \lambda_{\text{min}}(Q(t)): A(t)^\top P + P A(t) = 
+-Q(t) \right\}. \]
+
+\end{solution}
+
+\end{parts}
