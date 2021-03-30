@@ -9,6 +9,23 @@ theorem.
 
 \begin{solution}
 
+Consider the change of coordinates \[ x \mapsto x, \quad y \mapsto y, \quad z
+\mapsto z_s := z - z_0, \] under which the system dynamics becomes $(\dot{x},
+\dot{y}, \dot{z}_s) = f(x,y,z_s)$ where $f: \mathbb{R}^3 \rightarrow
+\mathbb{R}^3$ is given by 
+\[ f(x,y,z) = \left(a y (z + z_0), -b x (z + z_0), c x y \right). \]
+% \begin{align*}
+%     \dot{x} &= a y (z_s + z_0), \\
+%     \dot{y} &= -b x (z_s + z_0), \\
+%     \dot{z}_s &= c x y.
+% \end{align*}
+%
+Now, consider the Lyapunov function candidate $V: \mathbb{R}^3 \rightarrow
+\mathbb{R}$ \[ V(x,y,z_s) = bx^2 + ay^2 + \left( bcx^2 + 2acy^2 + abz_s(z_s +
+2z_0) \right)^2  \] This is a sum-of-squares polynomial function of $(x,y,z)$
+and hence is positive definite. Further, we have $V(0,0,0) = 0$ and rote
+computation shows that \[ \mc{L}_fV(x,y,z_s) = 0. \]
+Hence, the equilibrium $(x,y,z) = (0,0,z_s)$ is stable.
 
 
 \end{solution}

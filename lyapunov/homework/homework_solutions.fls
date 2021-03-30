@@ -666,9 +666,9 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/stmaryrd/stmary6.tfm
 INPUT /home/aykutsatici/.texlive2020/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-bold.luc
 INPUT /home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/question2_soln.tex
 INPUT /home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/question2_soln.tex
-INPUT /home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/question3_soln.tex
-INPUT /home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/question3_soln.tex
 INPUT /usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/question3_soln.tex
+INPUT /home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/question3_soln.tex
 INPUT /home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/question4_soln.tex
 INPUT /home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/question4_soln.tex
 INPUT /home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/question5_soln.tex
