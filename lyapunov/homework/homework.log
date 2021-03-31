@@ -1,8 +1,8 @@
 This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.11.4)  30 MAR 2021 14:50
  restricted system commands enabled.
  file:line:error style messages enabled.
-**/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/homework_solutions.tex
-(/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/homework_solutions.tex
+**/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/homework.tex
+(/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/homework.tex
 LaTeX2e <2020-10-01> patch level 2
 Lua module: luaotfload-main 2020-09-02 3.15 luaotfload entry point
 Lua module: luaotfload-init 2020-09-02 3.15 luaotfload submodule / initialization
@@ -1154,29 +1154,29 @@ Package: wrapfig 2003/01/31  v 3.6
 \c@thm=\count408
 \c@prop=\count409
 \c@rem=\count410
-) (/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/homework_solutions.aux)
-\openout1 = homework_solutions.aux
+) (/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/homework.aux)
+\openout1 = homework.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 16.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
  (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count411
@@ -1232,22 +1232,22 @@ Package caption Info: End \AtBeginDocument code.
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 20.
+(lastpage)             ! on input line 16.
 \c@tabularnotesi=\count417
 \enitdp@tabularnotes=\count418
 \c@tabularnotes*i=\count419
 \enitdp@tabularnotes*=\count420
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into your preamble.
- on input line 20.
+ on input line 16.
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 20.
+LaTeX Info: Redefining \selectfont on input line 16.
 
 
-Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 20.
+Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 16.
 
-(/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/setup_soln.tex
+(/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/setup.tex
 LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1261,30 +1261,30 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 9.
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 9.
- (/usr/local/texlive/2020/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)) (/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/question1_soln.tex) (/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/question2_soln.tex [1{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)) (/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/question1.tex) (/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/question2.tex) (/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/question3.tex) (/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/question4.tex) (/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/question5.tex [1{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-]) (/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/question3_soln.tex) (/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/question4_soln.tex [2]) (/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/question5_soln.tex [3]) (/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/question6_soln.tex) [4]
+]) (/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/sections/question6.tex) [2]
 This exam contains 6 questions with 4 parts, 0 subparts, and 0 subsubparts.
 This exam has a total of 100 points.
-This exam has a total of 20 bonus points.
+This exam has a total of 10 bonus points.
 
 AED: lastpage setting LastPage
-(/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/homework_solutions.aux))
+(/home/aykutsatici/repos/courses/nonlinear-systems/lyapunov/homework/homework.aux))
 
 Here is how much of LuaTeX's memory you used:
- 39392 strings out of 479005
+ 39385 strings out of 479005
  100000,1373583 words of node,token memory allocated
- 1385 words of node memory still in use:
-   22 hlist, 2 vlist, 10 rule, 2 glue, 4 kern, 1 glyph, 77 attribute, 108 glue_spec, 77 attribute_list, 4 write, 16 pdf_literal, 16 pdf_colorstack nodes
-   avail lists: 2:501,3:213,4:24,5:470,6:38,7:4596,8:44,9:666,10:6,11:284
- 56961 multiletter control sequences out of 65536+600000
- 71 fonts using 6362995 bytes
- 108i,13n,115p,823b,512s stack positions out of 5000i,500n,10000p,200000b,200000s
-</usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-italic.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on homework_solutions.pdf (4 pages, 117249 bytes).
+ 1333 words of node memory still in use:
+   22 hlist, 2 vlist, 10 rule, 2 glue, 4 kern, 1 glyph, 64 attribute, 108 glue_spec, 64 attribute_list, 4 write, 16 pdf_literal, 16 pdf_colorstack nodes
+   avail lists: 2:637,3:221,4:42,5:468,6:32,7:5275,8:32,9:520,10:5,11:333
+ 56954 multiletter control sequences out of 65536+600000
+ 70 fonts using 6231307 bytes
+ 108i,10n,115p,813b,460s stack positions out of 5000i,500n,10000p,200000b,200000s
+</usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-italic.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on homework.pdf (2 pages, 92417 bytes).
 
-PDF statistics: 115 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+PDF statistics: 95 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 131072)
  176 words of extra memory for PDF output out of 10000 (max. 100000000)
 
