@@ -1,9 +1,9 @@
 \beamer@sectionintoc {1}{Introduction}{3}{0}{1}
 \beamer@sectionintoc {2}{Notations and Definitions}{6}{0}{2}
 \beamer@sectionintoc {3}{Lyapunov Stability Analysis on Euclidean Spaces}{14}{0}{3}
-\beamer@sectionintoc {4}{The Invariance Principle}{34}{0}{4}
-\beamer@sectionintoc {5}{Stability of Linear Systems}{50}{0}{5}
-\beamer@sectionintoc {6}{Control-Lyapunov Functions}{55}{0}{6}
-\beamer@sectionintoc {7}{Morse-Lyapunov Functions}{63}{0}{7}
-\beamer@sectionintoc {8}{Systems with Single Critical Points}{67}{0}{8}
-\beamer@sectionintoc {9}{Systems with Multiple Critical Points}{70}{0}{9}
+\beamer@sectionintoc {4}{The Invariance Principle}{35}{0}{4}
+\beamer@sectionintoc {5}{Stability of Linear Systems}{51}{0}{5}
+\beamer@sectionintoc {6}{Control-Lyapunov Functions}{56}{0}{6}
+\beamer@sectionintoc {7}{Morse-Lyapunov Functions}{64}{0}{7}
+\beamer@sectionintoc {8}{Systems with Single Critical Points}{68}{0}{8}
+\beamer@sectionintoc {9}{Systems with Multiple Critical Points}{71}{0}{9}

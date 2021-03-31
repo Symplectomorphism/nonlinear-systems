@@ -77,13 +77,37 @@
         $V: D \rightarrow \mathbb{R}$ be a continuously differentiable function
         such that
         \begin{align*}
-            V(0) = 0 \; &\text{ and } \; V(x) > 0 \text{ in } D - \{0\}, \\
-            &\dot{V}(x) \leq 0 \text{ in } D.
+            &V(0) = 0 \; \text{ and } \; V(x) > 0 \text{ in } D - \{0\}, \\
+            &\dot{V}(x) \left[ = \pd{V}{x}(x) \cdot \frac{\dd x}{\dd t} = \dd 
+            V(x) \cdot f(x) = \mc{L}_fV(x) \right] \leq 0 \text{ in } D.
         \end{align*}
         Then, $x=0$ is stable. Moreover, if
         \[ \dot{V}(x) < 0 \text{ in } D - \{0\} \] then $x=0$ is asymptotically
         stable.
     \end{theorem}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Lyapunov Function Candidates}
+
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}[bth]
+                \centering
+                \includegraphics[width=1.0\textwidth]{figures/lyap_candidate_unbd.eps} 
+                \caption{\footnotesize $V(x) = x_1^2 + x_2^2.$}
+            \end{figure}
+            \[ \lim_{r \to \infty} \min_{\norm{x}{}=r} V(x) = \infty. \]
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}[bth]
+                \centering
+                \includegraphics[width=1.0\textwidth]{figures/lyap_candidate_not_unbd.eps} 
+                \caption{\footnotesize $V(x) = x_1^2 + \tanh{(x_2)}^2.$}
+            \end{figure}
+            \[ \lim_{r \to \infty} \min_{\norm{x}{}=r} V(x) = 1. \]
+        \end{column}
+    \end{columns}
 \end{frame}
 
 
