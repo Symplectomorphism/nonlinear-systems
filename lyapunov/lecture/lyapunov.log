@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.4.24)  31 MAR 2021 21:00
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.4.24)  8 APR 2021 22:13
  restricted system commands enabled.
  file:line:error style messages enabled.
 **/home/aykut/repos/courses/nonlinear_systems/lyapunov/lecture/lyapunov.tex
@@ -1836,14 +1836,14 @@ Package rerunfilecheck Info: File `lyapunov.out' has not changed.
 Here is how much of LuaTeX's memory you used:
  46385 strings out of 480991
  125171,1648299 words of node,token memory allocated
- 1955 words of node memory still in use:
-   28 hlist, 6 vlist, 12 rule, 13 glue, 4 kern, 9 penalty, 1 glyph, 162 attribute, 107 glue_spec, 162 attribute_list, 5 write, 16 pdf_literal, 21 pdf_colorstack nodes
+ 1959 words of node memory still in use:
+   28 hlist, 6 vlist, 12 rule, 13 glue, 4 kern, 9 penalty, 1 glyph, 163 attribute, 107 glue_spec, 163 attribute_list, 5 write, 16 pdf_literal, 21 pdf_colorstack nodes
    avail lists: 1:5,2:737,3:199,4:167,5:461,6:36,7:2931,8:60,9:838,10:20,11:191
  61804 multiletter control sequences out of 65536+600000
  147 fonts using 26651355 bytes
  74i,22n,123p,1891b,1137s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2020/texmf-dist/fonts/opentype/public/fira/FiraMono-Regular.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/fira/FiraSans-LightItalic.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/fira/FiraSans-Light.otf></usr/local/texlive/2020/texmf-dist/fonts/opentype/public/fira/FiraSans-Book.otf></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on lyapunov.pdf (75 pages, 607469 bytes).
+Output written on lyapunov.pdf (75 pages, 607515 bytes).
 
 PDF statistics: 818 PDF objects out of 1000 (max. 8388607)
  626 compressed objects within 7 object streams
